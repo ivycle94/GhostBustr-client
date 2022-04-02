@@ -69,6 +69,18 @@ const App = () => {
 						<ChangePassword msgAlert={msgAlert} user={user} />
 						</RequireAuth>}
 				/>
+				<Route
+					path='/addPlace'
+					element={
+						<RequireAuth user={user}>	
+							<CreatePlace msgAlert={msgAlert} user={user} />
+						</RequireAuth>
+					}
+				/>
+				<Route
+					path='/spookyplaces/:id'
+					element={<ShowPlace msgAlert={msgAlert} />}
+				/>
 			</Routes>
 			{msgAlerts.map((msgAlert) => (
 				<AutoDismissAlert
