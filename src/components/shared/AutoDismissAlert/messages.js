@@ -6,6 +6,12 @@ const messages = {
 	signOutSuccess: 'Come back soon!',
 	changePasswordSuccess: 'Password changed successfully!',
 	changePasswordFailure:'Failed to change passwords. Check your old password and try again.',
+	indexPlacesSuccess:'Spooky places retrieved successfully',
+	indexPlacesFailure: 'Failed to get spooky places. Please try again.',
+	showPlaceSuccess: 'Spooky Place retrieved successfully',
+	showPlaceFailure: 'Failed to get a spooky place. Please try again',
+	createPlaceSuccess: 'Spooky place created successfully',
+	createPlaceFailure: 'Failed to create a spooky place. Please try again'
 }
 
 module.exports = messages
