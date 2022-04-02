@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { createPlace } from '../../api/places'
+import { createPlace } from '../../api/place'
 import {createPlaceSuccess, createPlaceFailure} from '../shared/AutoDismissAlert/messages'
 import { useNavigate } from 'react-router-dom'
 import PlaceForm from '../shared/PlaceForm'
