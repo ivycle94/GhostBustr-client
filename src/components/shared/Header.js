@@ -9,7 +9,7 @@ const linkStyle = {
 const authenticatedOptions = (
 	<>
 		<Nav.Item className="m-2">
-			<Link to='' style={linkStyle}>
+			<Link to='addPlace' style={linkStyle}>
 				Add New Place
 			</Link>
 		</Nav.Item>

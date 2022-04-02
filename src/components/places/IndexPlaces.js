@@ -53,7 +53,7 @@ const IndexPlaces = (props) => {
                 <Card.Header>{place.name}</Card.Header>
                 <Card.Body>
                     <Card.Text>
-                        <Link to={`/places/${place._id}`}>
+                        <Link to={`/spookyplaces/${place._id}`}>
                         View {place.name}
                         </Link>
                     </Card.Text>
