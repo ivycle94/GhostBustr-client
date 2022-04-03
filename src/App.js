@@ -12,6 +12,8 @@ import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
+import ShowPlace from './components/places/ShowPlace'
+import CreatePlace from './components/places/CreatePlace'
 
 const App = () => {
 
@@ -68,6 +70,18 @@ const App = () => {
 						<RequireAuth user={user}>
 						<ChangePassword msgAlert={msgAlert} user={user} />
 						</RequireAuth>}
+				/>
+				<Route
+					path='/addPlace'
+					element={
+						<RequireAuth user={user}>	
+							<CreatePlace msgAlert={msgAlert} user={user} />
+						</RequireAuth>
+					}
+				/>
+				<Route
+					path='/spookyplaces/:id'
+					element={<ShowPlace msgAlert={msgAlert} />}
 				/>
 			</Routes>
 			{msgAlerts.map((msgAlert) => (

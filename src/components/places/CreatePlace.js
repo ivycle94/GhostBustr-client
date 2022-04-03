@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { createPlace } from '../../api/places'
+import { createPlace } from '../../api/place'
 import {createPlaceSuccess, createPlaceFailure} from '../shared/AutoDismissAlert/messages'
 import { useNavigate } from 'react-router-dom'
 import PlaceForm from '../shared/PlaceForm'
@@ -57,7 +57,7 @@ const CreatePlace = (props) => {
 
         createPlace(user, place)
             // if create is successful, we should navigate to the show page
-            .then(res => {navigate(`/places/${res.data.place._id}`)})
+            .then(res => {navigate(`/spookyplaces/${res.data.place._id}`)})
             // then we send a success message
             .then(() =>
                 msgAlert({
