@@ -59,7 +59,7 @@ const EditPlaceModal = (props) => {
                     message: 'The spooky place has not been updated',
                     variant: 'danger',
                 }))
-        console.log('this is the spooky place", place)
+        console.log('this is the spooky place', place)
     }
 
     return (

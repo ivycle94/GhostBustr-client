@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { getAllPlaces } from '../../api/places'
+import { getAllPlaces } from '../../api/place'
 import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import {indexPlacesSuccess, indexPlacesFailure} from '../shared/AutoDismissAlert/messages'
@@ -22,6 +22,7 @@ const IndexPlaces = (props) => {
         getAllPlaces()
         .then(res => {
             setPlaces(res.data.places)
+            console.log("IndexPlaces: places: ", places)
         })
         .then(() => {
             msgAlert({

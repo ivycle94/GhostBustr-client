@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { getOnePlace, updatePlace, removePlace } from '../../api/places'
+import { getOnePlace, updatePlace, removePlace } from '../../api/place'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Spinner, Container, Card, Button } from 'react-bootstrap'
 import { showPlaceSuccess, showPlaceFailure } from '../shared/AutoDismissAlert/messages'
@@ -30,7 +30,7 @@ const ShowPlace = (props) => {
             })
             .catch(() => {
                 msgAlert({
-                    heading: 'Failed to find the spooky place,
+                    heading: 'Failed to find the spooky place',
                     message: showPlaceFailure,
                     variant: 'danger',
                 })

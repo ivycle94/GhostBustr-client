@@ -16,7 +16,7 @@ export const createPlace = (user, newPlace) => {
     console.log('user', user)
     console.log('this is newPlace', newPlace)
     return axios({
-        url: `${apiUrl}/place`,
+        url: `${apiUrl}/spookyplaces`,
         method: 'POST',
         headers: {
             Authorization: `Token token=${user.token}`
