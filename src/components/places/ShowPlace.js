@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { getOnePlace, updatePlace } from '../../api/place'
 import { createVisit } from '../../api/visit'
 import { useParams, useNavigate } from 'react-router-dom'
@@ -158,7 +159,9 @@ const ShowPlace = (props) => {
                             />
                         </Form> */}
 
-                        <Button onClick={() => createVisit()}>Visited!</Button>
+                        <Link to={`/visit/${id}`}>
+                            <Button>Visited!</Button>
+                        </Link>
                     </Card.Footer>
                 </Card>
             </Container>
