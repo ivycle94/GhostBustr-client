@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { createVisit } from '../../api/visit'
 import { createVisitSuccess, createVisitFailure } from '../shared/AutoDismissAlert/messages'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import VisitForm from '../shared/VisitForm'
 
 ////////////////////////////////////////////////////////////////
@@ -10,6 +10,7 @@ import VisitForm from '../shared/VisitForm'
 // props necessary are user and msgAlert
 ////////////////////////////////////////////////////////////////
 const CreateVisit = (props) => {
+    const { id } = useParams();
     const { user, msgAlert } = props
     console.log('user in create', user)
     const navigate = useNavigate()
@@ -53,9 +54,9 @@ const CreateVisit = (props) => {
         // e === event
         e.preventDefault()
 
-        createVisit(user, visit)
+        createVisit(user, visit, id)
             // if create is successful, we should navigate to the show page
-            .then(res => { navigate(`/visit/${res.data.visit._id}`) })
+            .then(res => { navigate("/myvisits") })
             // then we send a success message
             .then(() =>
                 msgAlert({
