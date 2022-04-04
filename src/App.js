@@ -51,7 +51,7 @@ const App = () => {
 			<Routes>
 				<Route path='/' element={<Home msgAlert={msgAlert} user={user} />} />
 				<Route path='/spookyplaces' element={<IndexPlaces msgAlert={msgAlert} />} />
-				<Route path='/myvisits' element={<IndexVisited msgAlert={msgAlert} />} />
+				<Route path='/myvisits' element={<IndexVisited msgAlert={msgAlert} user={user} />} />
 				<Route
 					path='/sign-up'
 					element={<SignUp msgAlert={msgAlert} setUser={setUser} />}
