@@ -8,6 +8,7 @@ import AutoDismissAlert from './components/shared/AutoDismissAlert/AutoDismissAl
 import Header from './components/shared/Header'
 import RequireAuth from './components/shared/RequireAuth'
 import Home from './components/Home'
+import IndexPlaces from './components/places/IndexPlaces'
 import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
@@ -30,7 +31,7 @@ const App = () => {
 
 	const deleteAlert = (id) => {
 		setMsgAlerts((prevState) => {
-			return (prevState.filter((msg) => msg.id !== id) )
+			return (prevState.filter((msg) => msg.id !== id))
 		})
 	}
 
@@ -39,7 +40,7 @@ const App = () => {
 		setMsgAlerts(() => {
 			return (
 				[{ heading, message, variant, id }]
-    	    )
+			)
 		})
 	}
 
@@ -48,6 +49,7 @@ const App = () => {
 			<Header user={user} />
 			<Routes>
 				<Route path='/' element={<Home msgAlert={msgAlert} user={user} />} />
+				<Route path='/spookyplaces' element={<IndexPlaces msgAlert={msgAlert} />} />
 				<Route
 					path='/sign-up'
 					element={<SignUp msgAlert={msgAlert} setUser={setUser} />}
@@ -60,7 +62,7 @@ const App = () => {
 					path='/sign-out'
 					element={
 						<RequireAuth user={user}>
-						<SignOut msgAlert={msgAlert} clearUser={clearUser} user={user} />
+							<SignOut msgAlert={msgAlert} clearUser={clearUser} user={user} />
 						</RequireAuth>
 					}
 				/>
@@ -68,13 +70,13 @@ const App = () => {
 					path='/change-password'
 					element={
 						<RequireAuth user={user}>
-						<ChangePassword msgAlert={msgAlert} user={user} />
+							<ChangePassword msgAlert={msgAlert} user={user} />
 						</RequireAuth>}
 				/>
 				<Route
 					path='/addPlace'
 					element={
-						<RequireAuth user={user}>	
+						<RequireAuth user={user}>
 							<CreatePlace msgAlert={msgAlert} user={user} />
 						</RequireAuth>
 					}
