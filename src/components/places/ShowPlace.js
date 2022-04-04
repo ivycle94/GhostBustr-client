@@ -93,6 +93,7 @@ const ShowPlace = (props) => {
         )
     }
 
+    // removed boolean
     return (
         <>
             <Container className="fluid">
