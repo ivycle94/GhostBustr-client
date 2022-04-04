@@ -103,9 +103,6 @@ const ShowPlace = (props) => {
                             <small>Desscription: {place.description}</small><br />
                             <small>Location: {place.location}</small><br />
                             <small>Scare Level: {place.scareLevel}</small><br />
-                            <small>
-                                Visited : {place.visited ? 'yes' : 'no'}
-                            </small><br />
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
