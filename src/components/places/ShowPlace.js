@@ -59,9 +59,43 @@ const ShowPlace = (props) => {
             })
     }
 
-    const handleSubmit = (e) => {
+
+
+    // const handleChange = (e) => {
+    //     // e === event
+    //     e.persist()
+
+    //     setPlace(prevPlace => {
+
+    //         const name = e.target.name
+    //         let value = e.target.value
+
+    //         console.log('etarget type', e.target.type)
+    //         console.log('this is e.target checked', e.target.checked)
+
+    //         if (name === "visited" && e.target.checked) {
+    //             value = true
+    //         } else if (name === "visited" && !e.target.checked) {
+    //             value = false
+    //         }
+
+    //         if (e.target.type === 'number') {
+    //             value = parseInt(e.target.value)
+    //         }
+
+    //         const updatedValue = { [name]: value }
+
+    //         console.log('prevPlace', prevPlace)
+    //         console.log('updatedValue', updatedValue)
+
+    //         return { ...prevPlace, ...updatedValue }
+    //     })
+    // }
+
+    const handleSumbit = (e) => {
         // e === event
         e.preventDefault()
+
 
         createPlaceFav(user, place)
             // if create is successful, we should navigate to the show page
@@ -82,6 +116,7 @@ const ShowPlace = (props) => {
                 }))
         // console.log('this is the place', place)
     }
+
 
     if (!place) {
         return (
