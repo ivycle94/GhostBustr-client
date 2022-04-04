@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { getOnePlace, updatePlace, removePlace } from '../../api/place'
+import { createPlace, getOnePlace, updatePlace, removePlace } from '../../api/place'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Spinner, Container, Card, Button, Form } from 'react-bootstrap'
-import { showPlaceSuccess, showPlaceFailure } from '../shared/AutoDismissAlert/messages'
+import { showPlaceSuccess, showPlaceFailure, createPlaceSuccess, createPlaceFailure } from '../shared/AutoDismissAlert/messages'
 import EditPlaceModal from './EditPlaceModal'
 
 
@@ -37,7 +37,7 @@ const ShowPlace = (props) => {
             })
     }, [updated])
 
-    const removeThePlace = () => {
+    const removePlace = () => {
         console.log("removeThePlace id", place.id)
         console.log("removeThePlace _id", place._id)
 
@@ -69,15 +69,15 @@ const ShowPlace = (props) => {
             // then we send a success message
             .then(() =>
                 msgAlert({
-                    heading: 'Pet Added! Success!',
-                    message: createPetSuccess,
+                    heading: 'Place Added! Success!',
+                    message: createPlaceSuccess,
                     variant: 'success',
                 }))
             // if there is an error, we'll send an error message
             .catch(() =>
                 msgAlert({
                     heading: 'Oh No!',
-                    message: createPetFailure,
+                    message: createPlaceFailure,
                     variant: 'danger',
                 }))
         // console.log('this is the pet', pet)
