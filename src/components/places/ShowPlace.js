@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { createPlaceFav, getOnePlace, updatePlace, removePlace } from '../../api/place'
+import { getOnePlace, updatePlace } from '../../api/place'
+import { createVisit } from '../../api/visit'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Spinner, Container, Card, Button, Form } from 'react-bootstrap'
 import { showPlaceSuccess, showPlaceFailure, createPlaceSuccess, createPlaceFailure } from '../shared/AutoDismissAlert/messages'
@@ -157,7 +158,7 @@ const ShowPlace = (props) => {
                             />
                         </Form> */}
 
-                        <Button>Visited!</Button>
+                        <Button onClick={() => createVisit()}>Visited!</Button>
                     </Card.Footer>
                 </Card>
             </Container>
