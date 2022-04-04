@@ -92,30 +92,30 @@ const ShowPlace = (props) => {
     //     })
     // }
 
-    const handleSumbit = (e) => {
-        // e === event
-        e.preventDefault()
+    // const handleSumbit = (e) => {
+    //     // e === event
+    //     e.preventDefault()
 
 
-        createPlaceFav(user, place)
-            // if create is successful, we should navigate to the show page
-            .then(res => { navigate(`/spookyplaces/mine`) })
-            // then we send a success message
-            .then(() =>
-                msgAlert({
-                    heading: 'Place Added! Success!',
-                    message: createPlaceSuccess,
-                    variant: 'success',
-                }))
-            // if there is an error, we'll send an error message
-            .catch(() =>
-                msgAlert({
-                    heading: 'Oh No!',
-                    message: createPlaceFailure,
-                    variant: 'danger',
-                }))
-        // console.log('this is the place', place)
-    }
+    //     createVisited(user, place)
+    //         // if create is successful, we should navigate to the show page
+    //         .then(res => { navigate(`/spookyplaces/mine`) })
+    //         // then we send a success message
+    //         .then(() =>
+    //             msgAlert({
+    //                 heading: 'Place Added! Success!',
+    //                 message: createPlaceSuccess,
+    //                 variant: 'success',
+    //             }))
+    //         // if there is an error, we'll send an error message
+    //         .catch(() =>
+    //             msgAlert({
+    //                 heading: 'Oh No!',
+    //                 message: createPlaceFailure,
+    //                 variant: 'danger',
+    //             }))
+    //     // console.log('this is the place', place)
+    // }
 
 
     if (!place) {
@@ -128,6 +128,7 @@ const ShowPlace = (props) => {
         )
     }
 
+    // removed boolean
     return (
         <>
             <Container className="fluid">
@@ -138,9 +139,6 @@ const ShowPlace = (props) => {
                             <small>Desscription: {place.description}</small><br />
                             <small>Location: {place.location}</small><br />
                             <small>Scare Level: {place.scareLevel}</small><br />
-                            <small>
-                                Visited : {place.visited ? 'yes' : 'no'}
-                            </small><br />
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
@@ -159,7 +157,7 @@ const ShowPlace = (props) => {
                             />
                         </Form> */}
 
-                        <Button onClick={handleSubmit}>Faviee</Button>
+                        <Button>Visited!</Button>
                     </Card.Footer>
                 </Card>
             </Container>

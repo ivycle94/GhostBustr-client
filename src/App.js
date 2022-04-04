@@ -9,6 +9,7 @@ import Header from './components/shared/Header'
 import RequireAuth from './components/shared/RequireAuth'
 import Home from './components/Home'
 import IndexPlaces from './components/places/IndexPlaces'
+import IndexVisited from './components/visited/IndexVisited'
 import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
@@ -50,6 +51,7 @@ const App = () => {
 			<Routes>
 				<Route path='/' element={<Home msgAlert={msgAlert} user={user} />} />
 				<Route path='/spookyplaces' element={<IndexPlaces msgAlert={msgAlert} />} />
+				<Route path='/myvisits' element={<IndexVisited msgAlert={msgAlert} />} />
 				<Route
 					path='/sign-up'
 					element={<SignUp msgAlert={msgAlert} setUser={setUser} />}
