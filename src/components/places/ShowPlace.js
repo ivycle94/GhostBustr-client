@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { createPlace, getOnePlace, updatePlace, removePlace } from '../../api/place'
+import { createPlaceFav, getOnePlace, updatePlace, removePlace } from '../../api/place'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Spinner, Container, Card, Button, Form } from 'react-bootstrap'
 import { showPlaceSuccess, showPlaceFailure, createPlaceSuccess, createPlaceFailure } from '../shared/AutoDismissAlert/messages'
@@ -63,7 +63,7 @@ const ShowPlace = (props) => {
         // e === event
         e.preventDefault()
 
-        createPlace(user, place)
+        createPlaceFav(user, place)
             // if create is successful, we should navigate to the show page
             .then(res => { navigate(`/spookyplaces/mine`) })
             // then we send a success message
@@ -80,7 +80,7 @@ const ShowPlace = (props) => {
                     message: createPlaceFailure,
                     variant: 'danger',
                 }))
-        // console.log('this is the pet', pet)
+        // console.log('this is the place', place)
     }
 
     if (!place) {

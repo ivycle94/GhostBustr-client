@@ -25,6 +25,20 @@ export const createPlace = (user, newPlace) => {
     })
 }
 
+// POST -> create function to push into favorites list
+export const createPlaceFav = (user, newPlaceFav) => {
+    console.log('user', user)
+    console.log('this is newPlace', newPlaceFav)
+    return axios({
+        url: `${apiUrl}/spookyplaces/newfavorite`,
+        method: 'POST',
+        headers: {
+            Authorization: `Token token=${user.token}`
+        },
+        data: { place: newPlaceFav }
+    })
+}
+
 // PATCH -> update function
 export const updatePlace = (user, updatedPlace) => {
     console.log('user', user)
