@@ -1,17 +1,22 @@
 # TEAM GhostBustr
 
 # User Story:
-1. As a user, they will to be able to login and navigate through a list of ghost/haunted destinations.
-2. As a authenticated user, they will be able to review the haunted location and their information with the ability to add to a personal list with details after travel or making a new location 
-3. As a user, they will be able to edit locations with details after marking that they've traveled to that destination
+**As a Logged in User:**
+- they will to be able to navigate through a list of haunted destinations and view.
+- they will be able to click on individual destinations which will show them more information to the specific destination.
+
+- they will be able to review the haunted location and their information with the ability to add to a personal list with details after travel or making a new location 
+- they will be able to edit locations with details after marking that they've traveled to that destination
 
 # Wireframe:
 - Sign in page:
     coming soon
-- Index page:
+- Index page of all the haunted destinations:
 ![layout](/public/wireframeIndex.png)
 - Show page:
 ![layout](/public/wireframeShow.png)
+- Visited show page:
+![layout](/public/VisitedShow.png)
 - Sign out page: 
 coming soon
 
