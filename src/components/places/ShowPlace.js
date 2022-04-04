@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { getOnePlace, updatePlace, removePlace } from '../../api/place'
+import { createPlaceFav, getOnePlace, updatePlace, removePlace } from '../../api/place'
 import { useParams, useNavigate } from 'react-router-dom'
-import { Spinner, Container, Card, Button } from 'react-bootstrap'
-import { showPlaceSuccess, showPlaceFailure } from '../shared/AutoDismissAlert/messages'
+import { Spinner, Container, Card, Button, Form } from 'react-bootstrap'
+import { showPlaceSuccess, showPlaceFailure, createPlaceSuccess, createPlaceFailure } from '../shared/AutoDismissAlert/messages'
 import EditPlaceModal from './EditPlaceModal'
 
 
@@ -37,7 +37,7 @@ const ShowPlace = (props) => {
             })
     }, [updated])
 
-    const removeThePlace = () => {
+    const removePlace = () => {
         console.log("removeThePlace id", place.id)
         console.log("removeThePlace _id", place._id)
 
@@ -49,7 +49,7 @@ const ShowPlace = (props) => {
                     variant: 'success',
                 })
             })
-            .then(() => {navigate(`/`)})
+            .then(() => { navigate(`/`) })
             .catch(() => {
                 msgAlert({
                     heading: 'Spooky Place deletion failed.',
@@ -57,6 +57,30 @@ const ShowPlace = (props) => {
                     variant: 'danger',
                 })
             })
+    }
+
+    const handleSubmit = (e) => {
+        // e === event
+        e.preventDefault()
+
+        createPlaceFav(user, place)
+            // if create is successful, we should navigate to the show page
+            .then(res => { navigate(`/spookyplaces/mine`) })
+            // then we send a success message
+            .then(() =>
+                msgAlert({
+                    heading: 'Place Added! Success!',
+                    message: createPlaceSuccess,
+                    variant: 'success',
+                }))
+            // if there is an error, we'll send an error message
+            .catch(() =>
+                msgAlert({
+                    heading: 'Oh No!',
+                    message: createPlaceFailure,
+                    variant: 'danger',
+                }))
+        // console.log('this is the place', place)
     }
 
     if (!place) {
@@ -76,25 +100,35 @@ const ShowPlace = (props) => {
                     <Card.Header>{place.name}</Card.Header>
                     <Card.Body>
                         <Card.Text>
-                            <small>Desscription: {place.description}</small><br/>
-                            <small>Location: {place.location}</small><br/>
-                            <small>Scare Level: {place.scareLevel}</small><br/>
+                            <small>Desscription: {place.description}</small><br />
+                            <small>Location: {place.location}</small><br />
+                            <small>Scare Level: {place.scareLevel}</small><br />
                             <small>
                                 Visited : {place.visited ? 'yes' : 'no'}
-                            </small><br/>
+                            </small><br />
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                         <Button onClick={() => setModalOpen(true)} className="m-2" variant="warning">
+                        {/* <Button onClick={() => setModalOpen(true)} className="m-2" variant="warning">
                             Edit Place
                         </Button>
                         <Button onClick={() => removeThePlace()} className="m-2" variant="danger">
                             Delete Place
-                        </Button>
+                        </Button> */}
+                        {/* <Form>
+                            <Form.Label>Name</Form.Label>
+                            <Form.Check
+                                label='has u been?'
+                                name='visited'
+                                defaultChecked={place.visited}
+                            />
+                        </Form> */}
+
+                        <Button onClick={handleSubmit}>Faviee</Button>
                     </Card.Footer>
                 </Card>
             </Container>
-            <EditPlaceModal 
+            <EditPlaceModal
                 place={place}
                 show={modalOpen}
                 user={user}

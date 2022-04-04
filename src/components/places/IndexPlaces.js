@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { getAllPlaces } from '../../api/place'
 import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import {indexPlacesSuccess, indexPlacesFailure} from '../shared/AutoDismissAlert/messages'
+import { indexPlacesSuccess, indexPlacesFailure } from '../shared/AutoDismissAlert/messages'
 
 // I'm going to declare a style object
 // this will be used to corral my cards
@@ -16,28 +16,29 @@ const cardContainerLayout = {
 const IndexPlaces = (props) => {
 
     const [places, setPlaces] = useState(null)
-    const {msgAlert} = props
+    const { msgAlert } = props
 
     useEffect(() => {
         getAllPlaces()
-        .then(res => {
-            setPlaces(res.data.places)
-            console.log("IndexPlaces: places: ", places)
-        })
-        .then(() => {
-            msgAlert({
-                heading: 'Places have been retrieved!',
-                message: indexPlacesSuccess,
-                variant: 'success',
+            .then(res => {
+                setPlaces(res.data.places)
+                console.log("res.data", res.data);
+                console.log("IndexPlace: places: ", places)
             })
-        })
-        .catch(() => {
-            msgAlert({
-                heading: 'Failed to retrieve places!!',
-                message: indexPlacesFailure,
-                variant: 'danger',
+            .then(() => {
+                msgAlert({
+                    heading: 'Places have been retrieved!',
+                    message: indexPlacesSuccess,
+                    variant: 'success',
+                })
             })
-        })
+            .catch(() => {
+                msgAlert({
+                    heading: 'Failed to retrieve places!!',
+                    message: indexPlacesFailure,
+                    variant: 'danger',
+                })
+            })
     }, [])
 
     if (!places) {
@@ -48,14 +49,14 @@ const IndexPlaces = (props) => {
 
     let placeCards
 
-    if (places.length > 0 ) {
+    if (places.length > 0) {
         placeCards = places.map(place => (
             <Card key={place._id} style={{ width: '30%' }} className="m-2">
                 <Card.Header>{place.name}</Card.Header>
                 <Card.Body>
                     <Card.Text>
                         <Link to={`/spookyplaces/${place._id}`}>
-                        View {place.name}
+                            View {place.name}
                         </Link>
                     </Card.Text>
                 </Card.Body>
@@ -64,11 +65,11 @@ const IndexPlaces = (props) => {
     }
 
     return (
-        <> 
-        <h3>All the Spooky Places</h3>
-        <div style={cardContainerLayout}>
+        <>
+            <h3>All the Spooky Places</h3>
+            <div style={cardContainerLayout}>
                 {placeCards}
-        </div>
+            </div>
         </>
     )
 }
