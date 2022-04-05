@@ -10,6 +10,8 @@ const messages = {
 	indexPlacesFailure: 'Failed to get spooky places. Please try again.',
 	showPlaceSuccess: 'Spooky Place retrieved successfully',
 	showPlaceFailure: 'Failed to get a spooky place. Please try again',
+	showVisitedSuccess: 'Spooky Place visit retrieved successfully',
+	showVisitedFailure: 'Failed to get your spooky visit. Please try again',
 	createPlaceSuccess: 'Spooky place created successfully',
 	createPlaceFailure: 'Failed to create a spooky place. Please try again',
 	createVisitSuccess: 'Spooky place created successfully',

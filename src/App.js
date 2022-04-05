@@ -15,6 +15,7 @@ import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 import ShowPlace from './components/places/ShowPlace'
+import ShowVisited from './components/visited/ShowVisited'
 import CreatePlace from './components/places/CreatePlace'
 import CreateVisit from './components/visited/CreateVisit'
 
@@ -91,6 +92,10 @@ const App = () => {
 				<Route
 					path='/visit/:id'
 					element={<CreateVisit msgAlert={msgAlert} user={user} />}
+				/>
+				<Route
+					path='/myvisit/:id'
+					element={<ShowVisited msgAlert={msgAlert} user={user} />}
 				/>
 			</Routes>
 			{msgAlerts.map((msgAlert) => (
