@@ -18,6 +18,7 @@ const IndexVisited = (props) => {
     useEffect(() => {
         getAllVisits()
             .then(res => {
+                console.log("RES", res);
                 setVisit(res.data.visit)
                 // console.log("res.data", res.data);
                 // console.log("IndexVisits: visit: ", visit)

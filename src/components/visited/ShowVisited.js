@@ -38,9 +38,7 @@ const ShowVisited = (props) => {
             })
     }, [updated])
 
-<<<<<<< HEAD
     // const getDestination
-=======
     const removeTheVisited = () => {
         console.log("removeTheVisited id", visited.id)
         console.log("removeTheVisited _id", visited._id)
@@ -62,7 +60,6 @@ const ShowVisited = (props) => {
                 })
             })
     }
->>>>>>> 2d5a0e3ab27201ed633398149b0dd2eddffcf654
 
     if (!visited) {
         return (
@@ -74,21 +71,33 @@ const ShowVisited = (props) => {
         )
     }
 
+    // for loop here?
+
+    // let descriptionJsx = ''
+    // descriptionJsx = (
+    //     <>
+    //         {destination.map(destination => (
+    //             <Card.Header key={destination._id}>
+    //                 Visit to {visited.destination.name}
+    //             </Card.Header>
+    //         ))}
+    //     </>
+    // )
+
     return (
         <>
             <Container className="fluid">
                 <Card>
-                    <Card.Header>Visit to {visited.destination.id}</Card.Header>
+                    <Card.Header>
+                        Visit to
+                    </Card.Header>
                     <Card.Body>
                         <Card.Text>
                             <small>Description: {visited.description}</small><br />
                             <small>rating: {visited.visitRating}</small><br />
-<<<<<<< HEAD
                             <small>Date: {visited.travelToDate}</small><br />
-=======
                             <small>Date from: {visited.visitFromDate}</small><br />
                             <small>Date to: {visited.visitToDate}</small><br />
->>>>>>> 2d5a0e3ab27201ed633398149b0dd2eddffcf654
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
