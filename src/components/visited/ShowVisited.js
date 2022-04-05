@@ -38,27 +38,7 @@ const ShowVisited = (props) => {
             })
     }, [updated])
 
-    // const removeTheVisited = () => {
-    //     console.log("removeTheVisited id", visited.id)
-    //     console.log("removeTheVisited _id", visited._id)
-
-    //     removeVisited(user, visited._id)
-    //         .then(() => {
-    //             msgAlert({
-    //                 heading: 'The spooky visited has been removed!',
-    //                 message: 'The spooky visited has been deleted',
-    //                 variant: 'success',
-    //             })
-    //         })
-    //         .then(() => { navigate(`/`) })
-    //         .catch(() => {
-    //             msgAlert({
-    //                 heading: 'Spooky Visited deletion failed.',
-    //                 message: 'Failed to delete the spooky visited',
-    //                 variant: 'danger',
-    //             })
-    //         })
-    // }
+    // const getDestination
 
     if (!visited) {
         return (
@@ -74,11 +54,11 @@ const ShowVisited = (props) => {
         <>
             <Container className="fluid">
                 <Card>
-                    <Card.Header>Visit</Card.Header>
+                    <Card.Header>Visit to {visited.destination.id}</Card.Header>
                     <Card.Body>
                         <Card.Text>
                             <small>Description: {visited.description}</small><br />
-                            <small>rating: {visited.rating}</small><br />
+                            <small>rating: {visited.visitRating}</small><br />
                             <small>Date: {visited.travelToDate}</small><br />
                         </Card.Text>
                     </Card.Body>
