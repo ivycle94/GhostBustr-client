@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { getOneVisit } from '../../api/visit'
+import { getOneVisit, removeVisited } from '../../api/visit'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Spinner, Container, Card, Button } from 'react-bootstrap'
 import { showVisitedSuccess, showVisitedFailure } from '../shared/AutoDismissAlert/messages'
@@ -38,7 +38,31 @@ const ShowVisited = (props) => {
             })
     }, [updated])
 
+<<<<<<< HEAD
     // const getDestination
+=======
+    const removeTheVisited = () => {
+        console.log("removeTheVisited id", visited.id)
+        console.log("removeTheVisited _id", visited._id)
+
+        removeVisited(user, visited._id)
+            .then(() => {
+                msgAlert({
+                    heading: 'The spooky visited has been removed!',
+                    message: 'The spooky visited has been deleted',
+                    variant: 'success',
+                })
+            })
+            .then(() => { navigate(`/`) })
+            .catch(() => {
+                msgAlert({
+                    heading: 'Spooky Visited deletion failed.',
+                    message: 'Failed to delete the spooky visited',
+                    variant: 'danger',
+                })
+            })
+    }
+>>>>>>> 2d5a0e3ab27201ed633398149b0dd2eddffcf654
 
     if (!visited) {
         return (
@@ -59,16 +83,21 @@ const ShowVisited = (props) => {
                         <Card.Text>
                             <small>Description: {visited.description}</small><br />
                             <small>rating: {visited.visitRating}</small><br />
+<<<<<<< HEAD
                             <small>Date: {visited.travelToDate}</small><br />
+=======
+                            <small>Date from: {visited.visitFromDate}</small><br />
+                            <small>Date to: {visited.visitToDate}</small><br />
+>>>>>>> 2d5a0e3ab27201ed633398149b0dd2eddffcf654
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                        {/* <Button onClick={() => setModalOpen(true)} className="m-2" variant="warning">
+                        <Button onClick={() => setModalOpen(true)} className="m-2" variant="warning">
                             Edit Visited
                         </Button>
                         <Button onClick={() => removeTheVisited()} className="m-2" variant="danger">
                             Delete Visited
-                        </Button> */}
+                        </Button>
                     </Card.Footer>
                 </Card>
             </Container>
