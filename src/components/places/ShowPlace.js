@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { getOnePlace, updatePlace } from '../../api/place'
+import { getOnePlace, updatePlace, removePlace } from '../../api/place'
 import { createVisit } from '../../api/visit'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Spinner, Container, Card, Button, Form } from 'react-bootstrap'
@@ -39,11 +39,11 @@ const ShowPlace = (props) => {
             })
     }, [updated])
 
-    const removePlace = () => {
+    const removeThePlace = () => {
         console.log("removeThePlace id", place.id)
         console.log("removeThePlace _id", place._id)
 
-        removePlace(user, place._id)
+        removePlace(user, place.id)
             .then(() => {
                 msgAlert({
                     heading: 'The spooky place has been removed!',
@@ -51,7 +51,7 @@ const ShowPlace = (props) => {
                     variant: 'success',
                 })
             })
-            .then(() => { navigate(`/`) })
+            .then(() => { navigate(`/spookyplaces`) })
             .catch(() => {
                 msgAlert({
                     heading: 'Spooky Place deletion failed.',
@@ -138,18 +138,18 @@ const ShowPlace = (props) => {
                     <Card.Header>{place.name}</Card.Header>
                     <Card.Body>
                         <Card.Text>
-                            <small>Desscription: {place.description}</small><br />
+                            <small>Description: {place.description}</small><br />
                             <small>Location: {place.location}</small><br />
                             <small>Scare Level: {place.scareLevel}</small><br />
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                        {/* <Button onClick={() => setModalOpen(true)} className="m-2" variant="warning">
+                        <Button onClick={() => setModalOpen(true)} className="m-2" variant="warning">
                             Edit Place
                         </Button>
                         <Button onClick={() => removeThePlace()} className="m-2" variant="danger">
                             Delete Place
-                        </Button> */}
+                        </Button>
                         {/* <Form>
                             <Form.Label>Name</Form.Label>
                             <Form.Check
