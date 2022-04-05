@@ -144,24 +144,28 @@ const ShowPlace = (props) => {
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
+                    {
+                        place.owner && user && (user.id === place.owner.id) 
+                        ?
+                        <>
                         <Button onClick={() => setModalOpen(true)} className="m-2" variant="warning">
                             Edit Place
                         </Button>
                         <Button onClick={() => removeThePlace()} className="m-2" variant="danger">
                             Delete Place
                         </Button>
-                        {/* <Form>
-                            <Form.Label>Name</Form.Label>
-                            <Form.Check
-                                label='has u been?'
-                                name='visited'
-                                defaultChecked={place.visited}
-                            />
-                        </Form> */}
+                        </>
+    
+                        :
 
+                        null
+
+                    }
                         <Link to={`/visit/${id}`}>
                             <Button>Visited!</Button>
                         </Link>
+
+                
                     </Card.Footer>
                 </Card>
             </Container>
