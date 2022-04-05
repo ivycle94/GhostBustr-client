@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import { getOnePlace, updatePlace, removePlace } from '../../visited'
+import { getOneVisit } from '../../api/visit'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Spinner, Container, Card, Button } from 'react-bootstrap'
-import { showPlaceSuccess, showPlaceFailure } from '../shared/AutoDismissAlert/messages'
-import EditPlaceModal from './EditPlaceModal'
+import { showVisitedSuccess, showVisitedFailure } from '../shared/AutoDismissAlert/messages'
+// import EditPlaceModal from './EditVisitModal'
 
 const ShowVisited = (props) => {
- const [visited, setVisited] = useState(null)
+    const [visited, setVisited] = useState(null)
     const [modalOpen, setModalOpen] = useState(false)
     const [updated, setUpdated] = useState(false)
     const { user, msgAlert } = props
@@ -17,8 +17,11 @@ const ShowVisited = (props) => {
 
     // empty dependency array in useEffect to act like component did mount
     useEffect(() => {
-        getOneVisited(id)
-            .then(res => setVisited(res.data.visited))
+        getOneVisit(id)
+            .then(res =>
+
+                setVisited(res.data.visit)
+            )
             .then(() => {
                 msgAlert({
                     heading: 'The spooky visited has been retrieved!',
@@ -28,34 +31,34 @@ const ShowVisited = (props) => {
             })
             .catch(() => {
                 msgAlert({
-                    heading: 'Failed to find the spooky visited',
+                    heading: 'Failed to find the spooky visit',
                     message: showVisitedFailure,
                     variant: 'danger',
                 })
             })
     }, [updated])
 
-    const removeTheVisited = () => {
-        console.log("removeTheVisited id", visited.id)
-        console.log("removeTheVisited _id", visited._id)
+    // const removeTheVisited = () => {
+    //     console.log("removeTheVisited id", visited.id)
+    //     console.log("removeTheVisited _id", visited._id)
 
-        removeVisited(user, visited._id)
-            .then(() => {
-                msgAlert({
-                    heading: 'The spooky visited has been removed!',
-                    message: 'The spooky visited has been deleted',
-                    variant: 'success',
-                })
-            })
-            .then(() => {navigate(`/`)})
-            .catch(() => {
-                msgAlert({
-                    heading: 'Spooky Visited deletion failed.',
-                    message: 'Failed to delete the spooky visited',
-                    variant: 'danger',
-                })
-            })
-    }
+    //     removeVisited(user, visited._id)
+    //         .then(() => {
+    //             msgAlert({
+    //                 heading: 'The spooky visited has been removed!',
+    //                 message: 'The spooky visited has been deleted',
+    //                 variant: 'success',
+    //             })
+    //         })
+    //         .then(() => { navigate(`/`) })
+    //         .catch(() => {
+    //             msgAlert({
+    //                 heading: 'Spooky Visited deletion failed.',
+    //                 message: 'Failed to delete the spooky visited',
+    //                 variant: 'danger',
+    //             })
+    //         })
+    // }
 
     if (!visited) {
         return (
@@ -71,28 +74,25 @@ const ShowVisited = (props) => {
         <>
             <Container className="fluid">
                 <Card>
-                    <Card.Header>{visited.name}</Card.Header>
+                    <Card.Header>Visit</Card.Header>
                     <Card.Body>
                         <Card.Text>
-                            <small>Desscription: {visited.description}</small><br/>
-                            <small>Location: {visited.location}</small><br/>
-                            <small>Scare Level: {visited.scareLevel}</small><br/>
-                            <small>
-                                Visited : {visited.visited ? 'yes' : 'no'}
-                            </small><br/>
+                            <small>Description: {visited.description}</small><br />
+                            <small>rating: {visited.rating}</small><br />
+                            <small>Date: {visited.travelToDate}</small><br />
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                         <Button onClick={() => setModalOpen(true)} className="m-2" variant="warning">
+                        {/* <Button onClick={() => setModalOpen(true)} className="m-2" variant="warning">
                             Edit Visited
                         </Button>
                         <Button onClick={() => removeTheVisited()} className="m-2" variant="danger">
                             Delete Visited
-                        </Button>
+                        </Button> */}
                     </Card.Footer>
                 </Card>
             </Container>
-            <EditVisitedModal 
+            {/* <EditVisitedModal
                 visited={visited}
                 show={modalOpen}
                 user={user}
@@ -100,7 +100,7 @@ const ShowVisited = (props) => {
                 triggerRefresh={() => setUpdated(prev => !prev)}
                 updateVisited={updateVisited}
                 handleClose={() => setModalOpen(false)}
-            />
+            /> */}
         </>
     )
 }

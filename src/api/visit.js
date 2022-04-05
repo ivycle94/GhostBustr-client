@@ -8,7 +8,8 @@ export const getAllVisits = () => {
 
 // show function
 export const getOneVisit = (visitId) => {
-    return axios(`${apiUrl}/visit/${visitId}`)
+    console.log('visitId', visitId)
+    return axios(`${apiUrl}/myvisit/${visitId}`)
 }
 
 // POST -> create function

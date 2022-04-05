@@ -52,7 +52,7 @@ const IndexVisited = (props) => {
                 <Card.Header>Visiiiiit</Card.Header>
                 <Card.Body>
                     <Card.Text>
-                        <Link to={`/myvisits`}>
+                        <Link to={`/myvisit/${visit._id}`}>
                             View {visit.description}
                         </Link>
                     </Card.Text>
