@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { getAllVisits } from '../../api/visit'
-import { Card } from 'react-bootstrap'
+import { Card, Placeholder } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { indexVisitSuccess, indexVisitFailure } from '../shared/AutoDismissAlert/messages'
 
