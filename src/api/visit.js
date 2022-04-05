@@ -27,12 +27,26 @@ export const createVisit = (user, newVisit, placeId) => {
     })
 }
 
+// PATCH -> update function
+export const updateVisited = (user, updatedVisit) => {
+    console.log('PATCH: user:', user)
+    console.log('PATCH: newVisit:', updatedVisit)
+    return axios({
+        url: `${apiUrl}/visit/${updatedVisit._id}`,
+        method: 'PATCH',
+        headers: {
+            Authorization: `Token token=${user.token}`
+        },
+        data: { visit: updatedVisit }
+    })
+}
+
 // Delete -> remove function
-export const removeVisited = (user, placeId) => {
+export const removeVisited = (user, visitedId) => {
     // we need to swap out place ID with the ID of the visited
     console.log('user', user)
     return axios({
-        url: `${apiUrl}/pets/${placeId}`,
+        url: `${apiUrl}/visit/${visitedId}`,
         // we need to swap out place ID with the ID of the visited
         method: 'DELETE',
         headers: {

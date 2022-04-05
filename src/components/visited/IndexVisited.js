@@ -19,8 +19,8 @@ const IndexVisited = (props) => {
         getAllVisits()
             .then(res => {
                 setVisit(res.data.visit)
-                console.log("res.data", res.data);
-                console.log("IndexVisits: visit: ", visit)
+                // console.log("res.data", res.data);
+                // console.log("IndexVisits: visit: ", visit)
             })
             .then(() => {
                 msgAlert({

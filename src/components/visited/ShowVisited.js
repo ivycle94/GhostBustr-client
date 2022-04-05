@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { getOneVisit, removeVisited } from '../../api/visit'
+import { getOneVisit, updateVisited, removeVisited } from '../../api/visit'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Spinner, Container, Card, Button } from 'react-bootstrap'
 import { showVisitedSuccess, showVisitedFailure } from '../shared/AutoDismissAlert/messages'
-// import EditPlaceModal from './EditVisitModal'
+import EditVisitedModal from './EditVisitedModal'
 
 const ShowVisited = (props) => {
     const [visited, setVisited] = useState(null)
@@ -13,7 +13,7 @@ const ShowVisited = (props) => {
     const { id } = useParams()
     const navigate = useNavigate()
 
-    console.log('id in showVisited', id)
+    // console.log('id in showVisited', id)
 
     // empty dependency array in useEffect to act like component did mount
     useEffect(() => {
@@ -101,15 +101,15 @@ const ShowVisited = (props) => {
                     </Card.Footer>
                 </Card>
             </Container>
-            {/* <EditVisitedModal
-                visited={visited}
+            <EditVisitedModal
+                visit={visited}
                 show={modalOpen}
                 user={user}
                 msgAlert={msgAlert}
                 triggerRefresh={() => setUpdated(prev => !prev)}
                 updateVisited={updateVisited}
                 handleClose={() => setModalOpen(false)}
-            /> */}
+            />
         </>
     )
 }
