@@ -50,7 +50,7 @@ const ShowVisited = (props) => {
                     variant: 'success',
                 })
             })
-            .then(() => { navigate(`/`) })
+            .then(() => { navigate(`/myvisits`) })
             .catch(() => {
                 msgAlert({
                     heading: 'Spooky Visited deletion failed.',
