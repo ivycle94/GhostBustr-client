@@ -78,15 +78,16 @@ const ShowVisited = (props) => {
                     <Card.Body>
                         <Card.Text>
                             <small>Description: {visited.description}</small><br />
-                            <small>rating: {visited.rating}</small><br />
-                            <small>Date: {visited.travelToDate}</small><br />
+                            <small>rating: {visited.visitRating}</small><br />
+                            <small>Date from: {visited.visitFromDate}</small><br />
+                            <small>Date to: {visited.visitToDate}</small><br />
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
                         {/* <Button onClick={() => setModalOpen(true)} className="m-2" variant="warning">
                             Edit Visited
-                        </Button>
-                        <Button onClick={() => removeTheVisited()} className="m-2" variant="danger">
+                        </Button> */}
+                        {/* <Button onClick={() => removeTheVisited()} className="m-2" variant="danger">
                             Delete Visited
                         </Button> */}
                     </Card.Footer>
