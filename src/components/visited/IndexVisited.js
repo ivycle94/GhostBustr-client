@@ -49,7 +49,7 @@ const IndexVisited = (props) => {
     if (visit.length > 0) {
         visitCards = visit.map(visit => (
             <Card key={visit._id} style={{ width: '30%' }} className="m-2">
-                <Card.Header>Visiiiiit</Card.Header>
+                <Card.Header>Visit</Card.Header>
                 <Card.Body>
                     <Card.Text>
                         <Link to={`/myvisit/${visit._id}`}>
