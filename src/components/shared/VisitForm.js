@@ -6,6 +6,8 @@ import { Form, Container, Button } from 'react-bootstrap'
 ///////////////////////////////////////////////////////////////
 const VisitForm = (props) => {
     const { visit, handleSubmit, handleChange, heading } = props
+    console.log("Visit Form props:", props)
+    // console.log("this is visited", visit)
 
     return (
         <Container className="justify-content-center">
