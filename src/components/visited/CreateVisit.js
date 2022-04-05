@@ -12,7 +12,7 @@ import VisitForm from '../shared/VisitForm'
 const CreateVisit = (props) => {
     const { id } = useParams();
     const { user, msgAlert } = props
-    console.log('user in create', user)
+    console.log('CreateVisit: user:', user)
     const navigate = useNavigate()
 
     // we'll need two states
@@ -21,7 +21,7 @@ const CreateVisit = (props) => {
         visitRating: ''
     })
 
-    console.log('In create visit', visit)
+    console.log('CreateVisit: the visit: ', visit)
 
 
     const handleChange = (e) => {
