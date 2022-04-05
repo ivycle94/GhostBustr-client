@@ -8,16 +8,17 @@ export const getAllVisits = () => {
 
 // show function
 export const getOneVisit = (visitId) => {
-    return axios(`${apiUrl}/visit/${visitId}`)
+    console.log('visitId', visitId)
+    return axios(`${apiUrl}/myvisit/${visitId}`)
 }
 
 // POST -> create function
-export const createVisit = (user, newVisit) => {
+export const createVisit = (user, newVisit, placeId) => {
     // const [createdId, setCreatedId] = useState(null)
     console.log('user', user)
     console.log('this is newVisit', newVisit)
     return axios({
-        url: `${apiUrl}/visit/${newVisitId}`,
+        url: `${apiUrl}/visit/${placeId}`,
         method: 'POST',
         headers: {
             Authorization: `Token token=${user.token}`
