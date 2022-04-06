@@ -42,7 +42,6 @@ const ShowPlace = (props) => {
     const removeThePlace = () => {
         console.log("removeThePlace id", place.id)
         console.log("removeThePlace _id", place._id)
-
         removePlace(user, place.id)
             .then(() => {
                 msgAlert({
@@ -118,7 +117,6 @@ const ShowPlace = (props) => {
     //             }))
     //     // console.log('this is the place', place)
     // }
-
 
     if (!place) {
         return (
