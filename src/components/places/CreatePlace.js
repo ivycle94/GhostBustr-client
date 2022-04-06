@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { createPlace } from '../../api/place'
-import {createPlaceSuccess, createPlaceFailure} from '../shared/AutoDismissAlert/messages'
+import { createPlaceSuccess, createPlaceFailure } from '../shared/AutoDismissAlert/messages'
 import { useNavigate } from 'react-router-dom'
 import PlaceForm from '../shared/PlaceForm'
 
@@ -10,13 +10,15 @@ import PlaceForm from '../shared/PlaceForm'
 // props necessary are user and msgAlert
 ////////////////////////////////////////////////////////////////
 const CreatePlace = (props) => {
-    const {user, msgAlert} = props
+    const { user, msgAlert } = props
     console.log('user in create', user)
     const navigate = useNavigate()
 
     // we'll need two states
-    const [place, setPlace] = useState({name: '', location: '', description: '', 
-        image: '', scareLevel: '', visited: false})
+    const [place, setPlace] = useState({
+        name: '', location: '', description: '',
+        image: '', scareLevel: ''
+    })
 
     console.log('In create place', place)
 
@@ -32,9 +34,9 @@ const CreatePlace = (props) => {
             console.log('etarget type', e.target.type)
             console.log('this is e.target checked', e.target.checked)
 
-            if(name === "visited" && e.target.checked){
+            if (name === "visited" && e.target.checked) {
                 value = true
-            } else if (name === "visited" && !e.target.checked){
+            } else if (name === "visited" && !e.target.checked) {
                 value = false
             }
 
@@ -47,7 +49,7 @@ const CreatePlace = (props) => {
             console.log('prevPlace', prevPlace)
             console.log('updatedValue', updatedValue)
 
-            return {...prevPlace, ...updatedValue}
+            return { ...prevPlace, ...updatedValue }
         })
     }
 
@@ -57,7 +59,7 @@ const CreatePlace = (props) => {
 
         createPlace(user, place)
             // if create is successful, we should navigate to the show page
-            .then(res => {navigate(`/spookyplaces/${res.data.place._id}`)})
+            .then(res => { navigate(`/spookyplaces/${res.data.place._id}`) })
             // then we send a success message
             .then(() =>
                 msgAlert({
@@ -76,7 +78,7 @@ const CreatePlace = (props) => {
     }
 
     return (
-        <PlaceForm 
+        <PlaceForm
             place={place}
             handleChange={handleChange}
             handleSubmit={handleSubmit}

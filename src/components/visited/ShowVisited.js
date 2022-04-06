@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { getOneVisit, updateVisited, removeVisited } from '../../api/visit'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Spinner, Container, Card, Button } from 'react-bootstrap'
-import { showVisitedSuccess, showVisitedFailure } from '../shared/AutoDismissAlert/messages'
+import { showVisitedSuccess, showVisitedFailure, removeVisitSuccess, removeVisitFailure } from '../shared/AutoDismissAlert/messages'
 import EditVisitedModal from './EditVisitedModal'
 import Moment from 'react-moment';
 // import moment from 'moment';
@@ -29,7 +29,7 @@ const ShowVisited = (props) => {
             )
             .then(() => {
                 msgAlert({
-                    heading: 'The spooky visited has been retrieved!',
+                    heading: 'The spooky visit has been retrieved!',
                     message: showVisitedSuccess,
                     variant: 'success',
                 })
@@ -45,14 +45,13 @@ const ShowVisited = (props) => {
 
     // const getDestination
     const removeTheVisited = () => {
-        console.log("removeTheVisited id", visited.id)
-        console.log("removeTheVisited _id", visited._id)
+        // console.log("removeTheVisited id", visited.id)
 
         removeVisited(user, visited._id)
             .then(() => {
                 msgAlert({
                     heading: 'The spooky visited has been removed!',
-                    message: 'The spooky visited has been deleted',
+                    message: removeVisitSuccess,
                     variant: 'success',
                 })
             })
@@ -60,7 +59,7 @@ const ShowVisited = (props) => {
             .catch(() => {
                 msgAlert({
                     heading: 'Spooky Visited deletion failed.',
-                    message: 'Failed to delete the spooky visited',
+                    message: removeVisitFailure,
                     variant: 'danger',
                 })
             })

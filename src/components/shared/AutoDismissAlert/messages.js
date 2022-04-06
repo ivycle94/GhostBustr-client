@@ -14,8 +14,12 @@ const messages = {
 	showVisitedFailure: 'Failed to get your spooky visit. Please try again',
 	createPlaceSuccess: 'Spooky place created successfully',
 	createPlaceFailure: 'Failed to create a spooky place. Please try again',
-	createVisitSuccess: 'Spooky place created successfully',
-	createVisitFailure: 'Failed to create a spooky place. Please try again'
+	createVisitSuccess: 'Your scary stay has been saved',
+	createVisitFailure: 'Failed to save your scary stay. Please try again',
+	removePlaceSuccess: 'The spooky place has been deleted',
+	removePlaceFailure: 'Failed to delete the spooky place',
+	removeVisitSuccess: 'The spooky visit has been deleted',
+	removeVisitFailure: 'Failed to delete the spooky visited'
 }
 
 module.exports = messages
