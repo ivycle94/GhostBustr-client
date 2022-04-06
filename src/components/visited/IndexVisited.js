@@ -18,6 +18,7 @@ const IndexVisited = (props) => {
     useEffect(() => {
         getAllVisits()
             .then(res => {
+                console.log("RES", res);
                 setVisit(res.data.visit)
                 // console.log("res.data", res.data);
                 // console.log("IndexVisits: visit: ", visit)
@@ -38,6 +39,7 @@ const IndexVisited = (props) => {
             })
     }, [])
 
+
     if (!visit) {
         return <p>Loading ...</p>
     } else if (visit.length === 0) {
@@ -49,7 +51,7 @@ const IndexVisited = (props) => {
     if (visit.length > 0) {
         visitCards = visit.map(visit => (
             <Card key={visit._id} style={{ width: '30%' }} className="m-2">
-                <Card.Header>Visit</Card.Header>
+                <Card.Header>{visit?.destination?.name}</Card.Header>
                 <Card.Body>
                     <Card.Text>
                         <Link to={`/myvisit/${visit._id}`}>

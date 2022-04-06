@@ -38,6 +38,7 @@ const ShowVisited = (props) => {
             })
     }, [updated])
 
+    // const getDestination
     const removeTheVisited = () => {
         console.log("removeTheVisited id", visited.id)
         console.log("removeTheVisited _id", visited._id)
@@ -70,15 +71,31 @@ const ShowVisited = (props) => {
         )
     }
 
+    // for loop here?
+
+    // let descriptionJsx = ''
+    // descriptionJsx = (
+    //     <>
+    //         {destination.map(destination => (
+    //             <Card.Header key={destination._id}>
+    //                 Visit to {visited.destination.name}
+    //             </Card.Header>
+    //         ))}
+    //     </>
+    // )
+
     return (
         <>
             <Container className="fluid">
                 <Card>
-                    <Card.Header>Visit</Card.Header>
+                    <Card.Header>
+                        Visit to {visited.destination.name}
+                    </Card.Header>
                     <Card.Body>
                         <Card.Text>
                             <small>Description: {visited.description}</small><br />
                             <small>rating: {visited.visitRating}</small><br />
+                            <small>Date: {visited.travelToDate}</small><br />
                             <small>Date from: {visited.visitFromDate}</small><br />
                             <small>Date to: {visited.visitToDate}</small><br />
                         </Card.Text>
