@@ -56,7 +56,7 @@ const CreateVisit = (props) => {
 
         createVisit(user, visit, id)
             // if create is successful, we should navigate to the show page
-            .then(res => { navigate("/myvisits") })
+            .then(res => { navigate(`/myvisits/${user._id}`) })
             // then we send a success message
             .then(() =>
                 msgAlert({
