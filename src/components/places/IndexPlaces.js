@@ -19,7 +19,7 @@ const IndexPlaces = (props) => {
     const { msgAlert } = props
 
     useEffect(() => {
-        getAllPlaces()
+        getAllPlaces ()
             .then(res => {
                 setPlaces(res.data.places)
                 console.log("res.data", res.data);
