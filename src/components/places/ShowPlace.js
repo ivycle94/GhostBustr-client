@@ -4,7 +4,7 @@ import { getOnePlace, updatePlace, removePlace } from '../../api/place'
 import { createVisit } from '../../api/visit'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Spinner, Container, Card, Button, Form } from 'react-bootstrap'
-import { showPlaceSuccess, showPlaceFailure, createPlaceSuccess, createPlaceFailure } from '../shared/AutoDismissAlert/messages'
+import { showPlaceSuccess, showPlaceFailure, removePlaceSuccess, removePlaceFailure } from '../shared/AutoDismissAlert/messages'
 import EditPlaceModal from './EditPlaceModal'
 
 
@@ -46,7 +46,7 @@ const ShowPlace = (props) => {
             .then(() => {
                 msgAlert({
                     heading: 'The spooky place has been removed!',
-                    message: 'The spooky place has been deleted',
+                    message: removePlaceSuccess,
                     variant: 'success',
                 })
             })
@@ -54,69 +54,12 @@ const ShowPlace = (props) => {
             .catch(() => {
                 msgAlert({
                     heading: 'Spooky Place deletion failed.',
-                    message: 'Failed to delete the spooky place',
+                    message: removePlaceFailure,
                     variant: 'danger',
                 })
             })
     }
 
-
-
-    // const handleChange = (e) => {
-    //     // e === event
-    //     e.persist()
-
-    //     setPlace(prevPlace => {
-
-    //         const name = e.target.name
-    //         let value = e.target.value
-
-    //         console.log('etarget type', e.target.type)
-    //         console.log('this is e.target checked', e.target.checked)
-
-    //         if (name === "visited" && e.target.checked) {
-    //             value = true
-    //         } else if (name === "visited" && !e.target.checked) {
-    //             value = false
-    //         }
-
-    //         if (e.target.type === 'number') {
-    //             value = parseInt(e.target.value)
-    //         }
-
-    //         const updatedValue = { [name]: value }
-
-    //         console.log('prevPlace', prevPlace)
-    //         console.log('updatedValue', updatedValue)
-
-    //         return { ...prevPlace, ...updatedValue }
-    //     })
-    // }
-
-    // const handleSumbit = (e) => {
-    //     // e === event
-    //     e.preventDefault()
-
-
-    //     createVisited(user, place)
-    //         // if create is successful, we should navigate to the show page
-    //         .then(res => { navigate(`/spookyplaces/mine`) })
-    //         // then we send a success message
-    //         .then(() =>
-    //             msgAlert({
-    //                 heading: 'Place Added! Success!',
-    //                 message: createPlaceSuccess,
-    //                 variant: 'success',
-    //             }))
-    //         // if there is an error, we'll send an error message
-    //         .catch(() =>
-    //             msgAlert({
-    //                 heading: 'Oh No!',
-    //                 message: createPlaceFailure,
-    //                 variant: 'danger',
-    //             }))
-    //     // console.log('this is the place', place)
-    // }
 
     if (!place) {
         return (
@@ -128,7 +71,6 @@ const ShowPlace = (props) => {
         )
     }
 
-    // removed boolean
     return (
         <>
             <Container className="fluid">
