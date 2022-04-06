@@ -71,18 +71,6 @@ const ShowVisited = (props) => {
         )
     }
 
-    // for loop here?
-
-    // let descriptionJsx = ''
-    // descriptionJsx = (
-    //     <>
-    //         {destination.map(destination => (
-    //             <Card.Header key={destination._id}>
-    //                 Visit to {visited.destination.name}
-    //             </Card.Header>
-    //         ))}
-    //     </>
-    // )
 
     return (
         <>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Modal} from 'react-bootstrap'
+import { Modal } from 'react-bootstrap'
 import VisitForm from '../shared/VisitForm'
 
 const EditVisitModal = (props) => {
@@ -25,7 +25,7 @@ const EditVisitModal = (props) => {
             console.log('prevVisit', prevVisit)
             console.log('updatedValue', updatedValue)
 
-            return {...prevVisit, ...updatedValue}
+            return { ...prevVisit, ...updatedValue }
         })
     }
 
@@ -41,7 +41,7 @@ const EditVisitModal = (props) => {
             .then(() =>
                 msgAlert({
                     heading: 'Visit Updated! Success!',
-                    message: 'u did it',
+                    message: 'Your updated visit information is saved.',
                     variant: 'success',
                 }))
             .then(() => triggerRefresh())
@@ -59,7 +59,7 @@ const EditVisitModal = (props) => {
         <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton></Modal.Header>
             <Modal.Body>
-                <VisitForm 
+                <VisitForm
                     visit={visit}
                     handleChange={handleChange}
                     handleSubmit={handleSubmit}
@@ -69,5 +69,5 @@ const EditVisitModal = (props) => {
         </Modal>
     )
 }
-    
+
 export default EditVisitModal
