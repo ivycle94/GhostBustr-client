@@ -54,7 +54,11 @@ const IndexPlaces = (props) => {
             <Card key={place._id} style={{ width: '30%' }} className="m-2">
                 <Card.Header className='header-name'>{place.name}</Card.Header>
                 <Card.Body>
-                    <p><img className ="spooky-index-image" src={place.image}></img></p>
+
+                    
+
+                    <p><img className="spooky-index-image" src={place.image}></img></p>
+
                     <Card.Text>
                         <Link to={`/spookyplaces/${place._id}`}>
                             <Button variant="dark">View {place.name}</Button>
