@@ -69,6 +69,58 @@ const ShowPlace = (props) => {
             </Container>
         )
     }
+    // function ButtonControl() {
+    //     if (place.visitors) {
+    //         if (place.owner && user && (user.id === place.owner.id)) {
+    //             return <>
+    //                 <Button onClick={() => setModalOpen(true)} className="m-2" variant="warning">
+    //                     Edit Place
+    //                 </Button>
+    //             </>
+    //         }
+    //     } else {
+    //         if (place.owner && user && (user.id === place.owner.id)) {
+    //             return <Button onClick={() => setModalOpen(true)} className="m-2" variant="warning">
+    //                 Edit Place
+    //             </Button>
+    //         } else {
+    //             return <></>
+    //         }
+    //     }
+    // }
+
+    function ButtonControl() {
+        let loggedIn = false
+        if (place.owner && user && (user.id === place.owner.id)) {
+            return loggedIn = true
+        }
+
+        if (loggedIn && place.visitors.length > 0 && place.owner) {
+            // return
+
+            <>
+                <Button onClick={() => setModalOpen(true)} className="m-2" variant="warning">
+                    Edit Place
+                </Button>
+            </>
+        } else if (loggedIn && place.visitors.length === 0 && place.owner) {
+            // return
+            <>
+                <Button onClick={() => setModalOpen(true)} className="m-2" variant="warning">
+                    Edit Place
+                </Button>
+                <Button onClick={() => removeThePlace()} className="m-2" variant="danger">
+                    Delete Place
+                </Button>
+            </>
+        } else {
+            <></>
+        }
+    }
+
+
+
+
 
     return (
         <>
@@ -83,7 +135,7 @@ const ShowPlace = (props) => {
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                        {
+                        {/* {
                             place.owner && user && (user.id === place.owner.id)
                                 ?
                                 <>
@@ -99,7 +151,9 @@ const ShowPlace = (props) => {
 
                                 null
 
-                        }
+                        } */}
+
+                        {ButtonControl}
 
                         {
                             user
@@ -118,6 +172,7 @@ const ShowPlace = (props) => {
                                     </Link>
                                 </>
                         }
+
 
                     </Card.Footer>
                 </Card>

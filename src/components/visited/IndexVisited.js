@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { getAllVisits } from '../../api/visit'
 import { Card, Placeholder, Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { indexVisitSuccess, indexVisitFailure } from '../shared/AutoDismissAlert/messages'
 
 const cardContainerLayout = {
@@ -12,11 +12,12 @@ const cardContainerLayout = {
 
 const IndexVisited = (props) => {
 
+    const { id } = useParams()
     const [visit, setVisit] = useState(null)
     const { msgAlert } = props
 
     useEffect(() => {
-        getAllVisits()
+        getAllVisits(id)
             .then(res => {
                 console.log("RES", res);
                 setVisit(res.data.visit)

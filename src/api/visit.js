@@ -2,8 +2,9 @@ import apiUrl from '../apiConfig'
 import axios from 'axios'
 
 // index function
-export const getAllVisits = () => {
-    return axios(`${apiUrl}/myvisits`)
+export const getAllVisits = (userId) => {
+    console.log('visitId', userId)
+    return axios(`${apiUrl}/myvisits/${userId}`)
 }
 
 // show function
