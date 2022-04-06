@@ -89,7 +89,7 @@ const ShowVisited = (props) => {
             <Container className="fluid">
                 <Card>
                     <Card.Header>
-                        Visit to
+                        Visit to {visited.destination.name}
                     </Card.Header>
                     <Card.Body>
                         <Card.Text>
