@@ -4,6 +4,9 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { Spinner, Container, Card, Button } from 'react-bootstrap'
 import { showVisitedSuccess, showVisitedFailure } from '../shared/AutoDismissAlert/messages'
 import EditVisitedModal from './EditVisitedModal'
+import Moment from 'react-moment';
+// import moment from 'moment';
+
 
 const ShowVisited = (props) => {
     const [visited, setVisited] = useState(null)
@@ -12,7 +15,9 @@ const ShowVisited = (props) => {
     const { user, msgAlert } = props
     const { id } = useParams()
     const navigate = useNavigate()
-
+    // IVY -> trying to chnage time format here
+    // let visitFromDate = moment(visited.visitFromDate, "DD-MM-YYYY")
+    // console.log("this is the formatted date", visitFromDate)
     // console.log('id in showVisited', id)
 
     // empty dependency array in useEffect to act like component did mount
@@ -61,6 +66,8 @@ const ShowVisited = (props) => {
             })
     }
 
+   
+
     if (!visited) {
         return (
             <Container fluid className="justify-content-center">
@@ -83,9 +90,9 @@ const ShowVisited = (props) => {
                         <Card.Text>
                             <small>Description: {visited.description}</small><br />
                             <small>rating: {visited.visitRating}</small><br />
-                            <small>Date: {visited.travelToDate}</small><br />
-                            <small>Date from: {visited.visitFromDate}</small><br />
-                            <small>Date to: {visited.visitToDate}</small><br />
+                            <small>Date from: <Moment format="dddd MMMM YYYY">{visited.visitFromDate}</Moment></small><br/>
+                            <small>Date to: <Moment format="dddd MMMM YYYY">{visited.visitToDate}</Moment></small><br/>
+                            {/* <small>Date to: {visited.visitToDate}</small><br /> */}
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
