@@ -43,6 +43,7 @@ const ShowVisited = (props) => {
             })
     }, [updated])
 
+    // const getDestination
     const removeTheVisited = () => {
         console.log("removeTheVisited id", visited.id)
         console.log("removeTheVisited _id", visited._id)
@@ -77,11 +78,14 @@ const ShowVisited = (props) => {
         )
     }
 
+
     return (
         <>
             <Container className="fluid">
                 <Card>
-                    <Card.Header>Visit</Card.Header>
+                    <Card.Header>
+                        Visit to {visited.destination.name}
+                    </Card.Header>
                     <Card.Body>
                         <Card.Text>
                             <small>Description: {visited.description}</small><br />
