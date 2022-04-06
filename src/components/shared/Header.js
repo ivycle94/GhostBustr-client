@@ -54,7 +54,7 @@ const alwaysOptions = (
 
 const Header = ({ user }) => (
 	<Navbar bg='primary' variant='dark' expand='md'>
-		<Navbar.Brand className="m-2">
+		<Navbar.Brand className="m-2 header-title">
 			<Link to='/' style={linkStyle}>
 				GhostBustr
 			</Link>

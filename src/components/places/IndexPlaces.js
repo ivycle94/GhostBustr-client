@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { getAllPlaces } from '../../api/place'
-import { Card } from 'react-bootstrap'
+import { Card, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { indexPlacesSuccess, indexPlacesFailure } from '../shared/AutoDismissAlert/messages'
 
@@ -52,12 +52,16 @@ const IndexPlaces = (props) => {
     if (places.length > 0) {
         placeCards = places.map(place => (
             <Card key={place._id} style={{ width: '30%' }} className="m-2">
-                <Card.Header>{place.name}</Card.Header>
+                <Card.Header className='header-name'>{place.name}</Card.Header>
                 <Card.Body>
+
+                    
+
                     <p><img className="spooky-index-image" src={place.image}></img></p>
+
                     <Card.Text>
                         <Link to={`/spookyplaces/${place._id}`}>
-                            View {place.name}
+                            <Button variant="dark">View {place.name}</Button>
                         </Link>
                     </Card.Text>
                 </Card.Body>
