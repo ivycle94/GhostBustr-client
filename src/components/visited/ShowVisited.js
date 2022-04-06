@@ -86,12 +86,9 @@ const ShowVisited = (props) => {
                         <Card.Text>
                             <small>Description: {visited.description}</small><br />
                             <small>rating: {visited.visitRating}</small><br />
-                            {/* <small>Date from: {visited.visitFromDate}</small><br /> */}
-                            {/* THINGS THAT DIDN'T WORK: ...................................... */}
-                            <small>Date from: <Moment format="dddd MMMM YYYY, h:mm:ss a">{visited.visitFromDate}</Moment></small><br/>
-                            {/* <small>Date from: {moment(visited.visitFromDate).toDate()}</small><br /> */}
-                            {/* <small>Date from: {visited.visitFromDate.toISOString()}</small><br /> */}
-                            <small>Date to: {visited.visitToDate}</small><br />
+                            <small>Date from: <Moment format="dddd MMMM YYYY">{visited.visitFromDate}</Moment></small><br/>
+                            <small>Date to: <Moment format="dddd MMMM YYYY">{visited.visitToDate}</Moment></small><br/>
+                            {/* <small>Date to: {visited.visitToDate}</small><br /> */}
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
