@@ -53,7 +53,7 @@ const IndexVisited = (props) => {
             < Card key={visit._id} style={{ width: '30%' }} className="m-2" >
                 <Card.Header>{visit?.destination?.name}</Card.Header>
                 <Card.Body>
-                    <p><img class="visit-image" src={visit?.destination?.image}></img></p>
+                    <p><img className="visit-image" src={visit?.destination?.image}></img></p>
                     <p>{visit.visitFromDate}</p>
                     <p>{visit.visitToDate}</p>
                     <Card.Text>

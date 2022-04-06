@@ -7,7 +7,6 @@ import { Spinner, Container, Card, Button, Form } from 'react-bootstrap'
 import { showPlaceSuccess, showPlaceFailure, removePlaceSuccess, removePlaceFailure } from '../shared/AutoDismissAlert/messages'
 import EditPlaceModal from './EditPlaceModal'
 
-
 const ShowPlace = (props) => {
 
     const [place, setPlace] = useState(null)

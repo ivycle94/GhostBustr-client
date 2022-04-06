@@ -3,6 +3,10 @@ import { getAllPlaces } from '../../api/place'
 import { Card, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { indexPlacesSuccess, indexPlacesFailure } from '../shared/AutoDismissAlert/messages'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEye } from '@fortawesome/free-solid-svg-icons'
+
+const eye = <FontAwesomeIcon icon={faEye} />
 
 // I'm going to declare a style object
 // this will be used to corral my cards
@@ -55,13 +59,11 @@ const IndexPlaces = (props) => {
                 <Card.Header className='header-name'>{place.name}</Card.Header>
                 <Card.Body>
 
-                    
-
                     <p><img className="spooky-index-image" src={place.image}></img></p>
 
-                    <Card.Text>
+                    <Card.Text className="card-text">
                         <Link to={`/spookyplaces/${place._id}`}>
-                            <Button variant="dark">View {place.name}</Button>
+                            <Button className="eye-button" variant="dark">{eye}</Button>
                         </Link>
                     </Card.Text>
                 </Card.Body>
