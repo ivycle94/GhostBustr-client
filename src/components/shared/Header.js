@@ -2,10 +2,12 @@ import React, { Fragment } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import { Link } from 'react-router-dom'
+
 const linkStyle = {
 	color: 'white',
 	textDecoration: 'none'
 }
+
 const authenticatedOptions = (
 	<>
 		<Nav.Item className="m-2">
@@ -53,7 +55,7 @@ const alwaysOptions = (
 )
 
 const Header = ({ user }) => (
-	<Navbar bg='primary' variant='dark' expand='md'>
+	<Navbar bg='dark' variant='dark' expand='md'>
 		<Navbar.Brand className="m-2 header-title">
 			<Link to='/' style={linkStyle}>
 				GhostBustr
