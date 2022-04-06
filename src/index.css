@@ -36,3 +36,15 @@ code {
 .spooky-index-image {
   width: 100%;
 }
+
+.card-text {
+  text-align: center;
+}
+
+.eye-button {
+  padding: 8px 25px;
+}
+
+.visit-image {
+  width: 100%
+}
