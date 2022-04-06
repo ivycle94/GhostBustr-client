@@ -12,6 +12,27 @@ code {
     monospace;
 }
 
+@font-face {
+  font-family: "Ouroboros";
+  src: url("./fonts/Ouroboros-Regular.woff") format("woff"),
+}
+
+@font-face {
+  font-family: "Cantique";
+  src: url("./fonts/Cantique-Normal.woff") format("woff"),
+}
+
+.header-title {
+  font-family: "Ouroboros";
+  font-size: 25px;
+}
+
+.header-name {
+  font-family: "Cantique";
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .spooky-index-image {
   width: 100%;
 }
