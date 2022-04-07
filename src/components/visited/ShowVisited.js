@@ -5,6 +5,11 @@ import { Spinner, Container, Card, Button } from 'react-bootstrap'
 import { showVisitedSuccess, showVisitedFailure, removeVisitSuccess, removeVisitFailure } from '../shared/AutoDismissAlert/messages'
 import EditVisitedModal from './EditVisitedModal'
 import Moment from 'react-moment';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGhost } from '@fortawesome/free-solid-svg-icons'
+
+const ghost = <FontAwesomeIcon icon={faGhost} />
+
 // import moment from 'moment';
 
 
@@ -77,6 +82,8 @@ const ShowVisited = (props) => {
         )
     }
 
+    {/* TESTING GHOST ICON RATING : ivy */}
+ 
 
     return (
         <>
@@ -89,6 +96,8 @@ const ShowVisited = (props) => {
                         <Card.Text>
                             <small>Description: {visited.description}</small><br />
                             <small>rating: {visited.visitRating}</small><br />
+                            {/* TESTING GHOST ICON RATING : ivy */}
+                            { ghost }
                             <small>Date from: <Moment format="MMMM do, YYYY">{visited.visitFromDate}</Moment></small><br/>
                             <small>Date to: <Moment format="MMMM do, YYYY">{visited.visitToDate}</Moment></small><br/>
                         </Card.Text>
