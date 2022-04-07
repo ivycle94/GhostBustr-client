@@ -85,7 +85,7 @@ const ShowPlace = (props) => {
                     </Card.Body>
                     <Card.Footer>
                         {
-                            place.owner && user && (user.id === place.owner.id)
+                            place.owner && user && (user._id === place.owner._id)
                                 ?
                                 <>
                                     <Button onClick={() => setModalOpen(true)} className="m-2" variant="warning">
