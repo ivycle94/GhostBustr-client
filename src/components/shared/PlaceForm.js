@@ -49,6 +49,7 @@ const PlaceForm = (props) => {
                 />
                 <Button type='submit'>Submit</Button>
             </Form>
+            <a href="javascript:history.back()"><Button variant='dark'>Back</Button></a>
         </Container>
     )
 }

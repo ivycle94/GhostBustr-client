@@ -95,7 +95,7 @@ const ShowVisited = (props) => {
             return (<small>Scare Level: {ghost} {ghost} {ghost} {ghost} {ghost}</small>)
         }
         else {
-            return (<small>Scare Level: </small>)
+            return (<small>Scare Level: (Enter a Number 1-5) </small>)
         }
     }
 
@@ -110,11 +110,12 @@ const ShowVisited = (props) => {
                         <Card.Text>
                             <small>Description: {visited.description}</small><br />
                             <GhostRating /><br />
-                            <small>Date from: <Moment format="MMMM do, YYYY">{visited.visitFromDate}</Moment></small><br />
-                            <small>Date to: <Moment format="MMMM do, YYYY">{visited.visitToDate}</Moment></small><br />
+                            <small>Date from: <Moment format="MMMM DD, YYYY">{visited.visitFromDate}</Moment></small><br />
+                            <small>Date to: <Moment format="MMMM DD, YYYY">{visited.visitToDate}</Moment></small><br />
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
+                        <a href="javascript:history.back()"><Button variant='dark'>Back</Button></a>
                         <Button onClick={() => setModalOpen(true)} className="m-2" variant="warning">
                             Edit Visited
                         </Button>
