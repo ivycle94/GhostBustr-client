@@ -18,7 +18,6 @@ const authenticatedOptions = (user) => (
 		<Nav.Item className="m-2">
 			<Link to={`myvisits/${user._id}`} style={linkStyle}>
 				My Visits
-				{/* <Route path={`myvisits/${user._id}`} /> */}
 			</Link>
 		</Nav.Item>
 		<Nav.Item className="m-2">
