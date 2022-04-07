@@ -20,28 +20,28 @@ const PlaceForm = (props) => {
                 />
                 <Form.Label>Location</Form.Label>
                 <Form.Control
-                    placeholder="what is the location of your haunted destination?"
+                    placeholder="What is the location of your haunted destination?"
                     value={place.location}
                     name='location'
                     onChange={handleChange}
                 />
                 <Form.Label>Description</Form.Label>
                 <Form.Control
-                    placeholder="What is the description of your haunted destination?"
+                    placeholder="Describe the spooky encounters found here."
                     value={place.description}
                     name='description'
                     onChange={handleChange}
                 />
                 <Form.Label>Image</Form.Label>
                 <Form.Control
-                    placeholder="Image url for this haunted destination"
+                    placeholder="Image url/jpeg"
                     value={place.image}
                     name='image'
                     onChange={handleChange}
                 />
                 <Form.Label>Scare Level</Form.Label>
                 <Form.Control
-                    placeholder="On a scale of 1 to 10, what is the scare level?"
+                    placeholder="On a scale of 1 to 5, what is the scare level?"
                     value={place.scareLevel}
                     type="number"
                     name='scareLevel'

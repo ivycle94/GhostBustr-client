@@ -23,22 +23,22 @@ const IndexPlaces = (props) => {
     const { msgAlert } = props
 
     useEffect(() => {
-        getAllPlaces ()
+        getAllPlaces()
             .then(res => {
                 setPlaces(res.data.places)
-                console.log("res.data", res.data);
-                console.log("IndexPlace: places: ", places)
+                // console.log("res.data", res.data);
+                // console.log("IndexPlace: places: ", places)
             })
             .then(() => {
                 msgAlert({
-                    heading: 'Places have been retrieved!',
+                    heading: 'Spooky Places have been retrieved!',
                     message: indexPlacesSuccess,
                     variant: 'success',
                 })
             })
             .catch(() => {
                 msgAlert({
-                    heading: 'Failed to retrieve places!!',
+                    heading: 'Failed to retrieve Spooky Places!',
                     message: indexPlacesFailure,
                     variant: 'danger',
                 })
@@ -48,7 +48,7 @@ const IndexPlaces = (props) => {
     if (!places) {
         return <p>Loading ...</p>
     } else if (places.length === 0) {
-        return <p>No places yet, go add some</p>
+        return <p>No Spooky Places yet, go add some</p>
     }
 
     let placeCards

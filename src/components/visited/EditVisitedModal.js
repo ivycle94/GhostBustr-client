@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Modal } from 'react-bootstrap'
 import VisitForm from '../shared/VisitForm'
+import { editVisitedSuccess, editVisitedFailure } from '../shared/AutoDismissAlert/messages'
 
 const EditVisitModal = (props) => {
     const { user, show, handleClose, updateVisited, msgAlert, triggerRefresh } = props
@@ -40,8 +41,8 @@ const EditVisitModal = (props) => {
             // then we send a success message
             .then(() =>
                 msgAlert({
-                    heading: 'Visit Updated! Success!',
-                    message: 'Your updated visit information is saved.',
+                    heading: 'Your Visit has been updated successfully!',
+                    message: editVisitedSuccess,
                     variant: 'success',
                 }))
             .then(() => triggerRefresh())
@@ -49,7 +50,7 @@ const EditVisitModal = (props) => {
             .catch(() =>
                 msgAlert({
                     heading: 'Oh No!',
-                    message: 'that aint it',
+                    message: editVisitedFailure,
                     variant: 'danger',
                 }))
         // console.log('this is the visit', visit)
