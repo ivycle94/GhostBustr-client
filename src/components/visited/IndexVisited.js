@@ -57,8 +57,8 @@ const IndexVisited = (props) => {
     if (visit.length > 0) {
         visitCards = visit.map(visit => (
             < Card key={visit._id} style={{ width: '30%' }} className="m-2" >
-                <Card.Header>{visit?.destination?.name}</Card.Header>
-                <Card.Body>
+                <Card.Header className='header-name'>{visit?.destination?.name}</Card.Header>
+                <Card.Body className="card-body">
                     <p><img className="visit-image" src={visit?.destination?.image}></img></p>
                     <p>Date from: <Moment format="MMMM do, YYYY">{visit.visitFromDate}</Moment></p>
                     <p>Date to: <Moment format="MMMM do, YYYY">{visit.visitToDate}</Moment></p>
@@ -76,7 +76,7 @@ const IndexVisited = (props) => {
 
     return (
         <>
-            <h3>All the Spooky Places You've Been</h3>
+            <h3 className="spooky-places-header">All the Spooky Places You've Been</h3>
             <div style={cardContainerLayout}>
                 {visitCards}
             </div>

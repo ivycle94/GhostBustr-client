@@ -1,4 +1,5 @@
 body {
+  background-color: black;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -102,6 +103,7 @@ code {
 }
 
 .header-name {
+  background-color: rgba(159, 16, 16, 0.8);
   font-family: "Cantique";
   font-size: 20px;
   font-weight: bold;
@@ -127,7 +129,6 @@ code {
 .sign-in-image {
   width: 100%;
   z-index: -1;
-  /* margin-left: 50%; */
 }
 
 .sign-in-div {
@@ -152,12 +153,70 @@ code {
   margin-top: 10px;
 }
 
+.sign-up-container {
+  height: 120vh;
+  width: 160vh;
+  position: absolute;
+  top: 80px;
+  right: 5px;
+  margin-bottom: 50px;
+  z-index: 1;
+}
+
+.sign-up-div {
+  background-color: white;
+  width: 50%;
+  padding: 10px;
+}
+
+.sign-up-image {
+  width: 100%;
+  z-index: -1;
+}
+
+.sign-up-text-header {
+  font-family: "Cantique";
+  font-size: 50px;
+  font-weight: bold;
+  padding: 15px;
+}
+
+.sign-up-submit {
+  margin-top: 10px;
+}
+
+.sign-up-button-container {
+  text-align: right;
+}
+
+.sign-up-email {
+  margin-top: 10px;
+}
+
+.sign-up-password {
+  margin-top: 10px;
+}
+
+.sign-up-password-confirmation {
+  margin-top: 10px;
+}
+
+.spooky-places-header {
+  color: white;
+  padding: 5px;
+  margin-left: 10px;
+}
+
 .spooky-index-image {
   width: 100%;
 }
 
 .card-text {
   text-align: center;
+}
+
+.card-body {
+  background-color: rgba(243, 234, 234, 0.81);
 }
 
 .eye-button {
