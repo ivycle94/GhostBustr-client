@@ -79,7 +79,7 @@ const ChangePassword = (props) => {
                             onChange={e => setNewPassword(e.target.value)}
                         />
                     </Form.Group>
-                    <a href="/spookyplaces"><Button variant='dark'>Back to home</Button></a>
+                    <a href="javascript:history.back()"><Button variant='dark'>Back to home</Button></a>
                     <Button variant='primary' type='submit'>
                         Submit
                     </Button>
