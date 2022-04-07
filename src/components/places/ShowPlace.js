@@ -6,6 +6,11 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { Spinner, Container, Card, Button, Form } from 'react-bootstrap'
 import { showPlaceSuccess, showPlaceFailure, removePlaceSuccess, removePlaceFailure } from '../shared/AutoDismissAlert/messages'
 import EditPlaceModal from './EditPlaceModal'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGhost } from '@fortawesome/free-solid-svg-icons'
+
+
+const ghost = <FontAwesomeIcon icon={faGhost} />
 
 const ShowPlace = (props) => {
 
@@ -71,6 +76,23 @@ const ShowPlace = (props) => {
         )
     }
 
+    function GhostRating() {
+        if (parseInt(place.scareLevel) === 1) {
+            return (<small>Scare Level: {ghost}</small>)
+        } else if (parseInt(place.scareLevel) === 2) {
+            return (<small>Scare Level: {ghost} {ghost}</small>)
+        } else if (parseInt(place.scareLevel) === 3) {
+            return (<small>Scare Level: {ghost} {ghost} {ghost}</small>)
+        } else if (parseInt(place.scareLevel) === 4) {
+            return (<small>Scare Level: {ghost} {ghost} {ghost} {ghost}</small>)
+        } else if (parseInt(place.scareLevel) === 5) {
+            return (<small>Scare Level: {ghost} {ghost} {ghost} {ghost} {ghost}</small>)
+        }
+        else {
+            return (<small>Scare Level: </small>)
+        }
+    }
+
     return (
         <>
             <Container className="fluid">
@@ -80,7 +102,8 @@ const ShowPlace = (props) => {
                         <Card.Text>
                             <small>Description: {place.description}</small><br />
                             <small>Location: {place.location}</small><br />
-                            <small>Scare Level: {place.scareLevel}</small><br />
+                            <GhostRating />
+
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
