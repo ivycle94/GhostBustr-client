@@ -104,7 +104,7 @@ const ShowPlace = (props) => {
                                 ?
                                 <>
                                     <Link to={`/visit/${id}`}>
-                                        <Button>Visited!</Button>
+                                        <Button className='btn btn-dark'>Visited!</Button>
                                     </Link>
                                 </>
 
@@ -112,7 +112,7 @@ const ShowPlace = (props) => {
 
                                 <>
                                     <Link to={`/sign-in`}>
-                                        <Button>Visited!</Button>
+                                        <Button className='btn btn-dark'>Visited!</Button>
                                     </Link>
                                 </>
                         }

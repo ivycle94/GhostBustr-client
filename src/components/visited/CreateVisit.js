@@ -60,14 +60,14 @@ const CreateVisit = (props) => {
             // then we send a success message
             .then(() =>
                 msgAlert({
-                    heading: 'The visit has been Added!',
+                    heading: 'Your visit has been added!',
                     message: createVisitSuccess,
                     variant: 'success',
                 }))
             // if there is an error, we'll send an error message
             .catch(() =>
                 msgAlert({
-                    heading: 'Failed to create a visit!',
+                    heading: 'Failed to add your visit!',
                     message: createVisitFailure,
                     variant: 'danger',
                 }))
