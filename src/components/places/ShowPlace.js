@@ -91,9 +91,6 @@ const ShowPlace = (props) => {
                                     <Button onClick={() => setModalOpen(true)} className="m-2" variant="warning">
                                         Edit Place
                                     </Button>
-                                    <Button onClick={() => removeThePlace()} className="m-2" variant="danger" disabled={place.visitors.length > 1}>
-                                        Delete Place
-                                    </Button>
                                 </>
 
                                 :
