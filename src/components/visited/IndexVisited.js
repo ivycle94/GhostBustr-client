@@ -3,6 +3,7 @@ import { getAllVisits } from '../../api/visit'
 import { Card, Placeholder, Button } from 'react-bootstrap'
 import { useParams, Link } from 'react-router-dom'
 import { indexVisitSuccess, indexVisitFailure } from '../shared/AutoDismissAlert/messages'
+import Moment from 'react-moment';
 
 const cardContainerLayout = {
     display: 'flex',
@@ -55,8 +56,8 @@ const IndexVisited = (props) => {
                 <Card.Header>{visit?.destination?.name}</Card.Header>
                 <Card.Body>
                     <p><img className="visit-image" src={visit?.destination?.image}></img></p>
-                    <p>{visit.visitFromDate}</p>
-                    <p>{visit.visitToDate}</p>
+                    <p>Date from: <Moment format="MMMM do, YYYY">{visit.visitFromDate}</Moment></p>
+                    <p>Date to: <Moment format="MMMM do, YYYY">{visit.visitToDate}</Moment></p>
                     <Card.Text>
                         <Link to={`/myvisit/${visit._id}`}>
                             <Button className='btn btn-dark'>View</Button>
