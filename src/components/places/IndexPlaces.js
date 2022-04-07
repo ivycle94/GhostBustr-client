@@ -77,6 +77,7 @@ const IndexPlaces = (props) => {
             <h3 className="spooky-places-header">All the Spooky Places</h3>
             <div style={cardContainerLayout}>
                 {placeCards}
+            <a href="#top"><Button variant='dark'>Back to Top of Page</Button></a>
             </div>
         </>
     )

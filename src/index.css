@@ -107,6 +107,10 @@ code {
   font-family: "Cantique";
   font-size: 20px;
   font-weight: bold;
+  padding: 10px;
+  margin: 10px;
+  width: 90%;
+  z-index: 0;
 }
 
 .sign-in-container {
@@ -209,6 +213,11 @@ code {
 
 .spooky-index-image {
   width: 100%;
+
+}
+
+.spooky-index-image:hover .eye-button {
+  visibility: visible;
 
 }
 
