@@ -110,8 +110,8 @@ const ShowVisited = (props) => {
                         <Card.Text>
                             <small>Description: {visited.description}</small><br />
                             <GhostRating /><br />
-                            <small>Date from: <Moment format="MMMM do, YYYY">{visited.visitFromDate}</Moment></small><br />
-                            <small>Date to: <Moment format="MMMM do, YYYY">{visited.visitToDate}</Moment></small><br />
+                            <small>Date from: <Moment format="MMMM DD, YYYY">{visited.visitFromDate}</Moment></small><br />
+                            <small>Date to: <Moment format="MMMM DD, YYYY">{visited.visitToDate}</Moment></small><br />
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
