@@ -15,11 +15,13 @@ code {
 @font-face {
   font-family: "Ouroboros";
   src: url("./fonts/Ouroboros-Regular.woff") format("woff"),
+        url("./fonts/Ouroboros-Regular.woff2") format("woff2"),
 }
 
 @font-face {
   font-family: "Cantique";
   src: url("./fonts/Cantique-Normal.woff") format("woff"),
+      url("./fonts/Cantique-Normal.woff2") format("woff2"),
 }
 
 .home-image {
