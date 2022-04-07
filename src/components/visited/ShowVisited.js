@@ -5,7 +5,11 @@ import { Spinner, Container, Card, Button } from 'react-bootstrap'
 import { showVisitedSuccess, showVisitedFailure, removeVisitSuccess, removeVisitFailure } from '../shared/AutoDismissAlert/messages'
 import EditVisitedModal from './EditVisitedModal'
 import Moment from 'react-moment';
-// import moment from 'moment';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGhost } from '@fortawesome/free-solid-svg-icons'
+
+
+const ghost = <FontAwesomeIcon icon={faGhost} />
 
 
 const ShowVisited = (props) => {
@@ -78,6 +82,23 @@ const ShowVisited = (props) => {
     }
 
 
+    function GhostRating() {
+        if (parseInt(visited.visitRating) === 1) {
+            return (<small>Scare Level: {ghost}</small>)
+        } else if (parseInt(visited.visitRating) === 2) {
+            return (<small>Scare Level: {ghost} {ghost}</small>)
+        } else if (parseInt(visited.visitRating) === 3) {
+            return (<small>Scare Level: {ghost} {ghost} {ghost}</small>)
+        } else if (parseInt(visited.visitRating) === 4) {
+            return (<small>Scare Level: {ghost} {ghost} {ghost} {ghost}</small>)
+        } else if (parseInt(visited.visitRating) === 5) {
+            return (<small>Scare Level: {ghost} {ghost} {ghost} {ghost} {ghost}</small>)
+        }
+        else {
+            return (<small>Scare Level: </small>)
+        }
+    }
+
     return (
         <>
             <Container className="fluid">
@@ -88,9 +109,9 @@ const ShowVisited = (props) => {
                     <Card.Body>
                         <Card.Text>
                             <small>Description: {visited.description}</small><br />
-                            <small>rating: {visited.visitRating}</small><br />
-                            <small>Date from: <Moment format="MMMM do, YYYY">{visited.visitFromDate}</Moment></small><br/>
-                            <small>Date to: <Moment format="MMMM do, YYYY">{visited.visitToDate}</Moment></small><br/>
+                            <GhostRating /><br />
+                            <small>Date from: <Moment format="MMMM do, YYYY">{visited.visitFromDate}</Moment></small><br />
+                            <small>Date to: <Moment format="MMMM do, YYYY">{visited.visitToDate}</Moment></small><br />
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
