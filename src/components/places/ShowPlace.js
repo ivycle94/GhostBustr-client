@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGhost } from '@fortawesome/free-solid-svg-icons'
 
 
+
 const ghost = <FontAwesomeIcon icon={faGhost} />
 
 const ShowPlace = (props) => {

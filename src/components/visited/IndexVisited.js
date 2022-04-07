@@ -4,6 +4,10 @@ import { Card, Placeholder, Button } from 'react-bootstrap'
 import { useParams, Link } from 'react-router-dom'
 import { indexVisitSuccess, indexVisitFailure } from '../shared/AutoDismissAlert/messages'
 import Moment from 'react-moment';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEye } from '@fortawesome/free-solid-svg-icons'
+
+const eye = <FontAwesomeIcon icon={faEye} />
 
 const cardContainerLayout = {
     display: 'flex',
@@ -60,7 +64,7 @@ const IndexVisited = (props) => {
                     <p>Date to: <Moment format="MMMM do, YYYY">{visit.visitToDate}</Moment></p>
                     <Card.Text>
                         <Link to={`/myvisit/${visit._id}`}>
-                            <Button className='btn btn-dark'>View</Button>
+                            <Button className='btn btn-dark'>{eye}</Button>
                         </Link>
                     </Card.Text>
                 </Card.Body>
