@@ -15,11 +15,93 @@ code {
 @font-face {
   font-family: "Ouroboros";
   src: url("./fonts/Ouroboros-Regular.woff") format("woff"),
+        url("./fonts/Ouroboros-Regular.woff2") format("woff2"),
 }
 
 @font-face {
   font-family: "Cantique";
   src: url("./fonts/Cantique-Normal.woff") format("woff"),
+      url("./fonts/Cantique-Normal.woff2") format("woff2"),
+}
+
+.home-image {
+  position: relative;
+  width: 100%;
+  /* margin-left: 50%; */
+}
+
+.home-text-header {
+  color: white;
+  position: absolute;
+  top: 110px;
+  left: 40px;
+  font-family: "Cantique";
+  font-size: 50px;
+  font-weight: bold;
+  padding: 20px;
+  width: 50%;
+  z-index: 1;
+}
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+
+
+.home-text-header:hover {
+  animation: bounce 5s;
+}
+
+.home-description-one {
+  color: white;
+  position: absolute;
+  top: 250px;
+  left: 40px;
+  font-family: "Cantique";
+  font-size: 30px;
+  font-weight: bold;
+  padding: 20px;
+  width: 50%;
+  z-index: 1;
+}
+
+.home-description-two {
+  color: white;
+  position: absolute;
+  top: 400px;
+  left: 40px;
+  font-family: "Cantique";
+  font-size: 30px;
+  font-weight: bold;
+  padding: 20px;
+  width: 50%;
+  z-index: 1;
+}
+
+.home-description-three {
+  color: white;
+  position: absolute;
+  top: 570px;
+  left: 40px;
+  font-family: "Cantique";
+  font-size: 30px;
+  font-weight: bold;
+  padding: 20px;
+  width: 50%;
+  z-index: 1;
 }
 
 .header-title {

@@ -57,7 +57,7 @@ const IndexPlaces = (props) => {
         placeCards = places.map(place => (
             <Card key={place._id} style={{ width: '30%' }} className="m-2">
                 <Card.Header className='header-name'>{place.name}</Card.Header>
-                <Card.Body>
+                <Card.Body className="card-body d-flex flex-column justify-content-end">
 
                     <p><img className="spooky-index-image" src={place.image}></img></p>
 
