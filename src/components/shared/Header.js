@@ -58,7 +58,7 @@ const Header = ({ user }) => (
 	<Navbar bg='dark' variant='dark' expand='md'>
 		<Navbar.Brand className="m-2 header-title">
 			<Link to='/' style={linkStyle}>
-				GhostBustr
+				ghostbustr
 			</Link>
 		</Navbar.Brand>
 		<Navbar.Toggle aria-controls='basic-navbar-nav' />
