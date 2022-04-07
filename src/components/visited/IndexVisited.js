@@ -60,8 +60,8 @@ const IndexVisited = (props) => {
                 <Card.Header className='header-name'>{visit?.destination?.name}</Card.Header>
                 <Card.Body className="card-body">
                     <p><img className="visit-image" src={visit?.destination?.image}></img></p>
-                    <p>Date from: <Moment format="MMMM do, YYYY">{visit.visitFromDate}</Moment></p>
-                    <p>Date to: <Moment format="MMMM do, YYYY">{visit.visitToDate}</Moment></p>
+                    <p>Date from: <Moment format="MMMM DD, YYYY">{visit.visitFromDate}</Moment></p>
+                    <p>Date to: <Moment format="MMMM DD, YYYY">{visit.visitToDate}</Moment></p>
                     <Card.Text>
                         <Link to={`/myvisit/${visit._id}`}>
                             <Button className='btn btn-dark'>{eye}</Button>
