@@ -73,7 +73,7 @@ const IndexPlaces = (props) => {
 
     return (
         <>
-            <h3>All the Spooky Places</h3>
+            <h3 className="spooky-places-header">All the Spooky Places</h3>
             <div style={cardContainerLayout}>
                 {placeCards}
             </div>
