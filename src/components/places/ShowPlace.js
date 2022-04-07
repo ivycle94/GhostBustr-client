@@ -118,10 +118,6 @@ const ShowPlace = (props) => {
         }
     }
 
-
-
-
-
     return (
         <>
             <Container className="fluid">
