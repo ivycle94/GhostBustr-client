@@ -115,6 +115,7 @@ const ShowVisited = (props) => {
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
+                        <a href="javascript:history.back()"><Button variant='dark'>Back</Button></a>
                         <Button onClick={() => setModalOpen(true)} className="m-2" variant="warning">
                             Edit Visited
                         </Button>

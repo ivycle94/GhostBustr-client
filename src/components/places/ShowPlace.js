@@ -108,6 +108,7 @@ const ShowPlace = (props) => {
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>
+                        <a href="javascript:history.back()"><Button variant='dark'>Back</Button></a>
                         {
                             place.owner && user && (user._id === place.owner._id)
                                 ?
