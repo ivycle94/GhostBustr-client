@@ -56,14 +56,15 @@ const IndexPlaces = (props) => {
     if (places.length > 0) {
         placeCards = places.map(place => (
             <Card key={place._id} style={{ width: '30%' }} className="m-2">
-                <Card.Header className='header-name'>{place.name}</Card.Header>
+                {/* <Card.Header className='header-name'>{place.name}</Card.Header> */}
                 <Card.Body className="card-body d-flex flex-column justify-content-end">
 
                     <p><img className="spooky-index-image" src={place.image}></img></p>
 
                     <Card.Text className="card-text">
+                        <p className="header-name">{place.name}</p>
                         <Link to={`/spookyplaces/${place._id}`}>
-                            <Button className="eye-button" variant="dark">{eye}</Button>
+                             <Button className="eye-button" variant="dark">{eye}</Button>
                         </Link>
                     </Card.Text>
                 </Card.Body>
