@@ -95,7 +95,7 @@ const ShowVisited = (props) => {
             return (<small>Scare Level: {ghost} {ghost} {ghost} {ghost} {ghost}</small>)
         }
         else {
-            return (<small>Scare Level: </small>)
+            return (<small>Scare Level: (Enter a Number 1-5) </small>)
         }
     }
 
