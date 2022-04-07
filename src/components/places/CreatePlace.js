@@ -20,7 +20,7 @@ const CreatePlace = (props) => {
         image: '', scareLevel: ''
     })
 
-    console.log('In create place', place)
+    // console.log('In create place', place)
 
     const handleChange = (e) => {
         // e === event
@@ -70,7 +70,7 @@ const CreatePlace = (props) => {
             // if there is an error, we'll send an error message
             .catch(() =>
                 msgAlert({
-                    heading: 'Failed to create a spooky place!',
+                    heading: 'Failed to create a Spooky Place!',
                     message: createPlaceFailure,
                     variant: 'danger',
                 }))
@@ -82,7 +82,7 @@ const CreatePlace = (props) => {
             place={place}
             handleChange={handleChange}
             handleSubmit={handleSubmit}
-            heading="Add a new spooky place!"
+            heading="Add a new Spooky Place!"
         />
     )
 }

@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { Modal } from 'react-bootstrap'
 import PlaceForm from '../shared/PlaceForm'
+import { editPlaceSuccess, editPlaceFailure } from '../shared/AutoDismissAlert/messages'
 
 const EditPlaceModal = (props) => {
     const { user, show, handleClose, updatePlace, msgAlert, triggerRefresh } = props
-    const [ place, setPlace ] = useState(props.place)
+    const [place, setPlace] = useState(props.place)
 
     const handleChange = (e) => {
         // e === event
@@ -17,9 +18,9 @@ const EditPlaceModal = (props) => {
             console.log('etarget type', e.target.type)
             console.log('this is e.target checked', e.target.checked)
 
-            if(name === "visited" && e.target.checked){
+            if (name === "visited" && e.target.checked) {
                 value = true
-            } else if (name === "visited" && !e.target.checked){
+            } else if (name === "visited" && !e.target.checked) {
                 value = false
             }
 
@@ -32,7 +33,7 @@ const EditPlaceModal = (props) => {
             console.log('prevPlace', prevPlace)
             console.log('updatedValue', updatedValue)
 
-            return {...prevPlace, ...updatedValue}
+            return { ...prevPlace, ...updatedValue }
         })
     }
 
@@ -47,26 +48,26 @@ const EditPlaceModal = (props) => {
             // then we send a success message
             .then(() =>
                 msgAlert({
-                    heading: 'Spooky place updated!',
-                    message: 'The spooky place has been updated',
+                    heading: 'Spooky Place updated!',
+                    message: editPlaceSuccess,
                     variant: 'success',
                 }))
             .then(() => triggerRefresh())
             // if there is an error, we'll send an error message
             .catch(() =>
                 msgAlert({
-                    heading: 'Spooky place update has failed!',
-                    message: 'The spooky place has not been updated',
+                    heading: 'Spooky Place update has failed!',
+                    message: editPlaceFailure,
                     variant: 'danger',
                 }))
-        console.log('this is the spooky place', place)
+        // console.log('this is the spooky place', place)
     }
 
     return (
         <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton></Modal.Header>
             <Modal.Body>
-                <PlaceForm 
+                <PlaceForm
                     place={place}
                     handleChange={handleChange}
                     handleSubmit={handleSubmit}
@@ -76,5 +77,5 @@ const EditPlaceModal = (props) => {
         </Modal>
     )
 }
-    
+
 export default EditPlaceModal
