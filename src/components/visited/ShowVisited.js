@@ -8,7 +8,11 @@ import Moment from 'react-moment';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGhost } from '@fortawesome/free-solid-svg-icons'
 
+// {/* TESTING GHOST ICON RATING : ivy */}
 const ghost = <FontAwesomeIcon icon={faGhost} />
+// const ghost1 = <FontAwesomeIcon icon={faGhost} />
+// const ghost2 = <FontAwesomeIcon icon={faGhost} />
+// const ghostArray = []
 
 // import moment from 'moment';
 
@@ -29,7 +33,7 @@ const ShowVisited = (props) => {
     useEffect(() => {
         getOneVisit(id)
             .then(res =>
-
+                
                 setVisited(res.data.visit)
             )
             .then(() => {
@@ -81,10 +85,49 @@ const ShowVisited = (props) => {
             </Container>
         )
     }
+   
+    // {/* TESTING GHOST ICON RATING : ivy */}
+    // console.log("this is the ghost array", ghostArray)
+    // create function??
+    function GhostRating () {
+        // =================== TESTING WITH TERNARY ====================
+        // ======== works! rating --> 1
+            //test 1 without array: works.
+        // return (visited.visitRating === 1 || visited.visitRating === "1") ? ghost : "No Ghost"
+            // test 2 with array: doesn't work. icon doesn't render and rating+1 each time you go to same
+        // return (visited.visitRating === 1 || visited.visitRating === "1") ? ghostArray.push(ghost) : "No Ghost"
+        // === doesn't work! rating --> 2
+            // :(visited.visitRating === 2 || visited.visitRating === "2") ? ghost ghost : "Rating is NOT 1"
+        // ================= TESTING WITH CONDITIONALS =================
+        // if (visited.visitRating === 1) {
+        //     return ghost
+            // return ghost.$$typeof (doesn't work, renders blank)
+        // } else if (visited.visitRating === 2) {
+        //     // return ghostArray.push(ghost)
+            // console.log("this is the spooky ghost object", ghost)
+            // console.log("spooky ghost type test", ghost.$$typeof)
 
-    {/* TESTING GHOST ICON RATING : ivy */}
- 
+            // return ghost + ghost
+            // return {ghost.$$typeof} + {ghost.$$typeof}
+        // } else if (visited.visitRating === 3) {
 
+        if (visited.visitRating === 1) {
+            return (<small>Rating: {ghost}</small>)
+        } else if (visited.visitRating === 2) {
+            return (<small>Rating: {ghost} {ghost}</small>)
+        } else if (visited.visitRating === 3) {
+            return (<small>Rating: {ghost} {ghost} {ghost}</small>)
+        } else if (visited.visitRating === 4) {
+            return (<small>Rating: {ghost} {ghost} {ghost} {ghost}</small>)
+        } else if (visited.visitRating === 5) {
+            return (<small>Rating: {ghost} {ghost} {ghost} {ghost} {ghost}</small>)
+        } else {
+            return "Rating: Please enter a number 1 - 5"
+        }
+    }
+    // console.log("this is the visited object",visited)
+    // console.log("this is the visited rating", {visited.rating})
+    
     return (
         <>
             <Container className="fluid">
@@ -96,8 +139,15 @@ const ShowVisited = (props) => {
                         <Card.Text>
                             <small>Description: {visited.description}</small><br />
                             <small>rating: {visited.visitRating}</small><br />
+
                             {/* TESTING GHOST ICON RATING : ivy */}
-                            { ghost }
+
+                            {/* {visited.rating === 1 ? ghost : null }<br/> */}
+                            {/* Ternary working for rating 1 */}
+                            {/* {(visited.visitRating === 2 || visited.visitRating === "2") ? ghost + ghost : "Rating is NOT 1"  }<br/> */}
+                            {/* ternary function */}
+                            {/* <small>rating: {ghostRate()} </small><br /> */}
+                            <GhostRating /><br/>
                             <small>Date from: <Moment format="MMMM do, YYYY">{visited.visitFromDate}</Moment></small><br/>
                             <small>Date to: <Moment format="MMMM do, YYYY">{visited.visitToDate}</Moment></small><br/>
                         </Card.Text>
