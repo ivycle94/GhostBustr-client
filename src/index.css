@@ -13,12 +13,6 @@ code {
 }
 
 @font-face {
-  font-family: "Ouroboros";
-  src: url("./fonts/Ouroboros-Regular.woff") format("woff"),
-        url("./fonts/Ouroboros-Regular.woff2") format("woff2"),
-}
-
-@font-face {
   font-family: "Cantique";
   src: url("./fonts/Cantique-Normal.woff") format("woff"),
       url("./fonts/Cantique-Normal.woff2") format("woff2"),
@@ -27,7 +21,6 @@ code {
 .home-image {
   position: relative;
   width: 100%;
-  /* margin-left: 50%; */
 }
 
 .home-text-header {
@@ -59,7 +52,6 @@ code {
 		transform: translateY(-10px);
 	}
 }
-
 
 .home-text-header:hover {
   animation: bounce 5s;
@@ -105,7 +97,7 @@ code {
 }
 
 .header-title {
-  font-family: "Ouroboros";
+  font-family: "Cantique";
   font-size: 25px;
 }
 
@@ -113,6 +105,51 @@ code {
   font-family: "Cantique";
   font-size: 20px;
   font-weight: bold;
+}
+
+.sign-in-container {
+  height: 120vh;
+  width: 160vh;
+  position: absolute;
+  top: 80px;
+  right: 5px;
+  margin-bottom: 50px;
+  z-index: 1;
+}
+
+.sign-in-text-header {
+  font-family: "Cantique";
+  font-size: 50px;
+  font-weight: bold;
+  padding: 15px;
+}
+
+.sign-in-image {
+  width: 100%;
+  z-index: -1;
+  /* margin-left: 50%; */
+}
+
+.sign-in-div {
+  background-color: white;
+  width: 50%;
+  padding: 10px;
+}
+
+.sign-in-email {
+  margin-top: 10px;
+}
+
+.sign-in-password {
+  margin-top: 10px;
+}
+
+.button-container {
+  text-align: right;
+}
+
+.sign-in-submit {
+  margin-top: 10px;
 }
 
 .spooky-index-image {

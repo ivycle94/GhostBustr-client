@@ -55,11 +55,13 @@ const SignIn = (props) => {
     }
 
     return (
-        <div className='row'>
-            <div className='col-sm-10 col-md-8 mx-auto mt-5'>
-                <h3>Sign In</h3>
+        <>
+        <img className="sign-in-image" src="https://i.imgur.com/ELwwvSs.jpg"></img>
+        <div className='sign-in-container d-flex flex-row justify-content-end'>
+            <div className='sign-in-div col-sm-12 col-md-12 mt-5 mx-5 ml-12'>
+                <h3 className="sign-in-text-header">Sign in</h3>
                 <Form onSubmit={onSignIn}>
-                    <Form.Group controlId='email'>
+                    <Form.Group className="sign-in-email" controlId='email'>
                         <Form.Label>Email address</Form.Label>
                         <Form.Control
                             required
@@ -70,7 +72,7 @@ const SignIn = (props) => {
                             onChange={e => setEmail(e.target.value)}
                         />
                     </Form.Group>
-                    <Form.Group controlId='password'>
+                        <Form.Group className="sign-in-password" controlId='password'>
                         <Form.Label>Password</Form.Label>
                         <Form.Control
                             required
@@ -81,12 +83,18 @@ const SignIn = (props) => {
                             onChange={e => setPassword(e.target.value)}
                         />
                     </Form.Group>
-                    <Button variant='primary' type='submit' className='btn btn-dark'>
-                        Submit
-                    </Button>
+
+                        <div className="button-container">
+                        <Button className="sign-in-submit" variant='dark' type='submit'>
+                             Submit
+                        </Button>
+                        </div>
+
+
                 </Form>
             </div>
         </div>
+        </>
     )
 }
 
