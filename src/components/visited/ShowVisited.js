@@ -55,7 +55,7 @@ const ShowVisited = (props) => {
                     variant: 'success',
                 })
             })
-            .then(() => { navigate(`/myvisits`) })
+            .then(() => { navigate(`/myvisits/${user._id}`) })
             .catch(() => {
                 msgAlert({
                     heading: 'Spooky Visited deletion failed.',
@@ -65,7 +65,7 @@ const ShowVisited = (props) => {
             })
     }
 
-   
+
 
     if (!visited) {
         return (
@@ -89,8 +89,8 @@ const ShowVisited = (props) => {
                         <Card.Text>
                             <small>Description: {visited.description}</small><br />
                             <small>rating: {visited.visitRating}</small><br />
-                            <small>Date from: <Moment format="dddd MMMM YYYY">{visited.visitFromDate}</Moment></small><br/>
-                            <small>Date to: <Moment format="dddd MMMM YYYY">{visited.visitToDate}</Moment></small><br/>
+                            <small>Date from: <Moment format="dddd MMMM YYYY">{visited.visitFromDate}</Moment></small><br />
+                            <small>Date to: <Moment format="dddd MMMM YYYY">{visited.visitToDate}</Moment></small><br />
                             {/* <small>Date to: {visited.visitToDate}</small><br /> */}
                         </Card.Text>
                     </Card.Body>
