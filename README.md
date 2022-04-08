@@ -18,19 +18,28 @@
 - sign out
 
 # Routes Table:
-- coming soon.
+
+| Endpoint         | Component | `AuthenticatedRoute`? |
+|------------------|-------------------|-------|
+| `/sign-up`       | `SignUp`    | No |
+| `/sign-in`       | `SignIn`    | No |
+| `/spookyplaces`  | `Index`     | No |
+| `/spookyplaces/:placeId`  | `Show`| Yes |
+| `/addPlace`      | `Create`   | Yes | 
+| `/myvisits/:userId`  | `Index`| Yes |
+| `/myvisits/:visitId`  | `Show`| Yes |
+| `/change-password` | `ChangePassword`  | Yes |
+| `/sign-out`        | `SignOut`   | Yes |
+ 
 
 # Wireframe:
-- Sign in page:
-    coming soon
 - Index page of all the haunted destinations:
 ![layout](/public/wireframeIndex.png)
 - Show page:
 ![layout](/public/wireframeShow.png)
 - Visited show page:
 ![layout](/public/VisitedShow.png)
-- Sign out page: 
-coming soon
+
 
 # Approach Taken:
 - create restful routes to be able to format an index, edit, show, and delete function
