@@ -1,12 +1,24 @@
 # TEAM GhostBustr
 
 # User Story:
-**As a Logged in User:**
-- they will to be able to navigate through a list of haunted destinations and view.
-- they will be able to click on individual destinations which will show them more information to the specific destination.
+**As a Public User:**
+- navigate through a list of haunted destinations.
+- click on individual destinations to view information to the specific destination.
+- sign up
 
-- they will be able to review the haunted location and their information with the ability to add to a personal list with details after travel or making a new location 
-- they will be able to edit locations with details after marking that they've traveled to that destination
+**As a Logged in User:**
+- log in
+- navigate through a list of haunted destinations.
+- click on individual destinations to view information to the specific destination.
+- keep a list of the locations they've visted.
+- review the haunted locations they've visited.
+- log personal details and information of each visit they visited.
+- edit and remove visited locations 
+- create a a new location for other user's to see publicly
+- sign out
+
+# Routes Table:
+- coming soon.
 
 # Wireframe:
 - Sign in page:
@@ -26,6 +38,7 @@ coming soon
 - format pages through react
 
 # Installation Instructions:
+- coming soon.
 
 # Tech Used:
 - HTML
@@ -34,6 +47,6 @@ coming soon
 - Boostrap
 - CSS
 - Axios
-- Mongodb
+- MongoDB
 - Mongoose
 - will add more!
