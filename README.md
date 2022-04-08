@@ -49,7 +49,18 @@
 - format pages through react
 
 # Installation Instructions:
-- coming soon.
+
+- before cloning this repo, download to your local computer the fonts used (!https://velvetyne.fr/fonts/cantique/)
+- fork and clone this repo
+- ensure you have a `.gitignore` file with `node_modules` & `.env` dependencies listed inside (
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local)
+- this app uses mongoDb and will need to be connected to designated hosts for the api and client (3000 and 8000 is what will be designated respectively in the clone)
+- install dependencies with npm install
+- ensure API is functioning by running `npm start` on both ports
 
 # Tech Used:
 - HTML
