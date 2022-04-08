@@ -89,8 +89,8 @@ const SignIn = (props) => {
                              Submit
                         </Button>
                         </div>
+                        <p className='text-center'>Don't have an Account? <a href="/sign-up">Sign Up</a></p>
                 </Form>
-                <p>Don't have an Account? <a href="/sign-up">Sign Up</a></p>
             </div>
         </div>
         </>
