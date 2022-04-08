@@ -205,6 +205,20 @@ code {
   margin-top: 10px;
 }
 
+.sign-out-div {
+  text-align: center;
+}
+
+.sign-out-text-header {
+  font-family: "Cantique";
+  font-size: 60px;
+}
+
+.sign-out-text {
+  padding: 50px;
+  text-align: center;
+} 
+
 .spooky-places-header {
   color: white;
   padding: 5px;
@@ -231,6 +245,24 @@ code {
 
 .eye-button {
   padding: 8px 25px;
+}
+
+.show-image {
+  width: 60%;
+  padding: 10px;
+}
+
+.show-description {
+  text-align: left;
+  padding: 10px;
+}
+
+.show-footer {
+  text-align: right;
+}
+
+.show-buttons {
+  margin: 10px;
 }
 
 .visit-image {

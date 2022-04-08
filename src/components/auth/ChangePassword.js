@@ -79,8 +79,8 @@ const ChangePassword = (props) => {
                             onChange={e => setNewPassword(e.target.value)}
                         />
                     </Form.Group>
-                    <a href="javascript:history.back()"><Button variant='dark'>Back to home</Button></a>
-                    <Button variant='primary' type='submit'>
+                    <a className="show-buttons" href="javascript:history.back()"><Button variant='dark'>Back to home</Button></a>
+                    <Button className="show-buttons" variant='primary' type='submit'>
                         Submit
                     </Button>
                 </Form>

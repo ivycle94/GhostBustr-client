@@ -42,7 +42,7 @@ const VisitForm = (props) => {
                     name='visitRating'
                     onChange={handleChange}
                 />
-                <Button type='submit'>Submit</Button>
+                <Button className="show-buttons" type='submit'>Submit</Button>
             </Form>
         </Container>
     )
