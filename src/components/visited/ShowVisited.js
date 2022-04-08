@@ -84,34 +84,36 @@ const ShowVisited = (props) => {
 
     function GhostRating() {
         if (parseInt(visited.visitRating) === 1) {
-            return (<small>Scare Level: {ghost}</small>)
+            return (<small><b>Scare Level:</b> <h2>{ghost}</h2></small>)
         } else if (parseInt(visited.visitRating) === 2) {
-            return (<small>Scare Level: {ghost} {ghost}</small>)
+            return (<small><b>Scare Level:</b> <h2>{ghost} {ghost}</h2></small>)
         } else if (parseInt(visited.visitRating) === 3) {
-            return (<small>Scare Level: {ghost} {ghost} {ghost}</small>)
+            return (<small><b>Scare Level:</b> <h2>{ghost} {ghost} {ghost}</h2></small>)
         } else if (parseInt(visited.visitRating) === 4) {
-            return (<small>Scare Level: {ghost} {ghost} {ghost} {ghost}</small>)
+            return (<small><b>Scare Level:</b> <h2>{ghost} {ghost} {ghost} {ghost}</h2></small>)
         } else if (parseInt(visited.visitRating) === 5) {
-            return (<small>Scare Level: {ghost} {ghost} {ghost} {ghost} {ghost}</small>)
+            return (<small><b>Scare Level:</b> <h2>{ghost} {ghost} {ghost} {ghost} {ghost}</h2></small>)
         }
         else {
-            return (<small>Scare Level: (Enter a Number 1-5) </small>)
+            return (<small><b>Scare Level:</b> (Enter a Number 1-5) </small>)
         }
     }
 
     return (
         <>
-            <Container className="fluid">
+            <Container className="fluid mt-5">
                 <Card>
-                    <Card.Header>
-                        Visit to {visited.destination.name}
+                    <Card.Header className='text-center'>
+                        <h4>Visit to {visited.destination.name}</h4>
                     </Card.Header>
                     <Card.Body>
                         <Card.Text>
-                            <small>Description: {visited.description}</small><br />
+                            <small><b>Description:</b> {visited.description}</small><br />
+                            <br/>
                             <GhostRating /><br />
-                            <small>Date from: <Moment format="MMMM DD, YYYY">{visited.visitFromDate}</Moment></small><br />
-                            <small>Date to: <Moment format="MMMM DD, YYYY">{visited.visitToDate}</Moment></small><br />
+                            <small><b>Date:</b> <Moment format="MMMM DD, YYYY">{visited.visitFromDate}</Moment></small>
+                            <span> - </span>
+                            <small> <Moment format="MMMM DD, YYYY">{visited.visitToDate}</Moment></small><br />
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>

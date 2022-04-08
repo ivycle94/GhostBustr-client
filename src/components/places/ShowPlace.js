@@ -79,15 +79,15 @@ const ShowPlace = (props) => {
 
     function GhostRating() {
         if (parseInt(place.scareLevel) === 1) {
-            return (<small>Scare Level: {ghost}</small>)
+            return (<small><b>Scare Level:</b> <h2>{ghost}</h2></small>)
         } else if (parseInt(place.scareLevel) === 2) {
-            return (<small>Scare Level: {ghost} {ghost}</small>)
+            return (<small><b>Scare Level:</b> <h2>{ghost} {ghost}</h2></small>)
         } else if (parseInt(place.scareLevel) === 3) {
-            return (<small>Scare Level: {ghost} {ghost} {ghost}</small>)
+            return (<small><b>Scare Level:</b> <h2>{ghost} {ghost} {ghost}</h2></small>)
         } else if (parseInt(place.scareLevel) === 4) {
-            return (<small>Scare Level: {ghost} {ghost} {ghost} {ghost}</small>)
+            return (<small><b>Scare Level:</b> <h2>{ghost} {ghost} {ghost} {ghost}</h2></small>)
         } else if (parseInt(place.scareLevel) === 5) {
-            return (<small>Scare Level: {ghost} {ghost} {ghost} {ghost} {ghost}</small>)
+            return (<small><b>Scare Level:</b> <h2>{ghost} {ghost} {ghost} {ghost} {ghost}</h2></small>)
         }
         else {
             return (<small>Scare Level: </small>)
@@ -96,15 +96,15 @@ const ShowPlace = (props) => {
 
     return (
         <>
-            <Container className="fluid">
+            <Container className="fluid mt-5">
                 <Card>
-                    <Card.Header>{place.name}</Card.Header>
+                    <Card.Header className='card-title'><h2>{place.name}</h2></Card.Header>
                     <Card.Body className="d-flex justify-content-start">
                         <img className="show-image" src={place.image}></img>
                         <Card.Text className="show-description">
-                            <small>Description:<p></p> {place.description}</small><br />
+                            <small><b>Description:</b><br/> {place.description}</small><br />
                             <p></p>
-                            <small>Location:<p></p>{place.location}</small><br />
+                            <small><b>Location:</b><br/> {place.location}</small><br />
                             <p></p>
                             <GhostRating />
 
