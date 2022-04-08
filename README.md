@@ -1,4 +1,5 @@
 # TEAM GhostBustr
+
 ![layout](/public/homepage.png)
 
 # User Story:
