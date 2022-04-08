@@ -96,7 +96,7 @@ const ShowPlace = (props) => {
 
     return (
         <>
-            <Container className="fluid">
+            <Container className="fluid mt-5">
                 <Card>
                     <Card.Header className='card-title'><h2>{place.name}</h2></Card.Header>
                     <Card.Body className="d-flex justify-content-start">
