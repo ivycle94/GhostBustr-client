@@ -100,6 +100,7 @@ const SignUp = (props) => {
                              Submit
                         </Button>
                     </div>
+                    <p className='text-center'>Already Have an Account? <a href="/sign-in">Sign In</a></p>
                 </Form>
             </div>
         </div>
