@@ -47,9 +47,9 @@ const PlaceForm = (props) => {
                     name='scareLevel'
                     onChange={handleChange}
                 />
-                <Button type='submit'>Submit</Button>
+                <Button className="show-buttons" type='submit'>Submit</Button>
+                <a href="javascript:history.back()"><Button className="show-buttons" variant='dark'>Back</Button></a>
             </Form>
-            <a href="javascript:history.back()"><Button variant='dark'>Back</Button></a>
         </Container>
     )
 }

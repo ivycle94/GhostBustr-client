@@ -59,7 +59,7 @@ const SignIn = (props) => {
         <img className="sign-in-image" src="https://i.imgur.com/ELwwvSs.jpg"></img>
         <div className='sign-in-container d-flex flex-row justify-content-end'>
             <div className='sign-in-div col-sm-12 col-md-12 mt-5 mx-5 ml-12'>
-                <h3 className="sign-in-text-header">Sign in</h3>
+                <h3 className="sign-in-text-header">Sign In</h3>
                 <Form onSubmit={onSignIn}>
                     <Form.Group className="sign-in-email" controlId='email'>
                         <Form.Label>Email address</Form.Label>

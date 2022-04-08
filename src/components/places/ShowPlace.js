@@ -99,16 +99,19 @@ const ShowPlace = (props) => {
             <Container className="fluid">
                 <Card>
                     <Card.Header>{place.name}</Card.Header>
-                    <Card.Body>
-                        <Card.Text>
-                            <small>Description: {place.description}</small><br />
-                            <small>Location: {place.location}</small><br />
+                    <Card.Body className="d-flex justify-content-start">
+                        <img className="show-image" src={place.image}></img>
+                        <Card.Text className="show-description">
+                            <small>Description:<p></p> {place.description}</small><br />
+                            <p></p>
+                            <small>Location:<p></p>{place.location}</small><br />
+                            <p></p>
                             <GhostRating />
 
                         </Card.Text>
                     </Card.Body>
-                    <Card.Footer>
-                        <a href="javascript:history.back()"><Button variant='dark'>Back</Button></a>
+                    <Card.Footer className="show-footer">
+                        <a href="javascript:history.back()"><Button className="show-buttons" variant='dark'>Back</Button></a>
                         {
                             place.owner && user && (user._id === place.owner._id)
                                 ?
@@ -137,7 +140,7 @@ const ShowPlace = (props) => {
 
                                 <>
                                     <Link to={`/sign-in`}>
-                                        <Button className='btn btn-dark'>Visited!</Button>
+                                        <Button className='show-buttons btn btn-dark'>Visited!</Button>
                                     </Link>
                                 </>
                         }
