@@ -1,7 +1,7 @@
 let apiUrl
 const apiUrls = {
     // YOU MUST CHANGE PRODUCTION URL WHEN DEPLOYING
-	production: '<https://ghostbustr-app.herokuapp.com/>',
+	production: 'https://ghostbustr-app.herokuapp.com',
 	development: 'http://localhost:8000',
 }
 
