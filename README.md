@@ -1,6 +1,9 @@
 # TEAM GhostBustr
-
+An App where ghost hunter enthusiasts can view haunted locations, keep track of visited locations, and also add more locations for other users to see and rate!
+ - Deployed Link: https://go-ghostbustr-app.herokuapp.com/
 ![layout](/public/homepage.png)
+
+
 
 # User Story:
 **As a Public User:**
