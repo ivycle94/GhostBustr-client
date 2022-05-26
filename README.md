@@ -189,7 +189,7 @@
 <summary> :art: Wireframes</summary><br />
 
 | Description                               | Screenshot                                               |
-|------------------------------------------ | ---------------------------------------------------------|
+|------------------------------------------ | -------------------------------------------------------- |
 | <h3 align="center">Index Page</h3>        | <img src="https://i.imgur.com/y4ch2Cc.png" width="700">  |
 | <h3 align="center">Show Page</h3>         | <img src="https://i.imgur.com/7tYwFrd.png" width="700">  |
 
@@ -199,7 +199,7 @@
 <summary> :gear: Functionality</summary><br />
 
 | Description                               | Screenshot                                               |
-|------------------------------------------ | ---------------------------------------------------------|
+|------------------------------------------ | -------------------------------------------------------- |
 | <h3 align="center">Home Page</h3>         | <img src="https://i.imgur.com/xXyrrSk.png" width="700"/> |
 | <h3 align="center">Sign In Page</h3>      | <img src="https://i.imgur.com/fv3DGT8.png" width="700"/> |
 | <h3 align="center">Sign Up Page</h3>      | <img src="https://i.imgur.com/QXU2Tud.png" width="700"/> |
