@@ -183,11 +183,25 @@
 <h1>:arrow_right: Routes</h1>
 
 <details>
-<summary> Spooky Places</summary>
+<summary> Home</summary>
+
+| Endpoint                  | Component | AuthenticatedRoute? |
+|---------------------------|-----------|---------------------|
+| `/`                       | `Home`    | No                  |
+
+</details>
+
+<details>
+<summary> Place</summary>
 
 | Endpoint                  | Component | AuthenticatedRoute? |
 |---------------------------|-----------|---------------------|
 | `/spookyplaces`           | `Index`   | No                  |
+| `/spookyplaces/:placeId`  | `Show`    | No                  |
+| `/addPlace`               | `Create`  | Yes                 |
+| `/spookyplaces/:placeId`  | `Update`  | Yes                 |
+
+
 
 </details>
 
@@ -196,7 +210,9 @@
 
 | Endpoint                  | Component | AuthenticatedRoute? |
 |---------------------------|-----------|---------------------|
-| `/myvisit/:userId`        | `Index`   | No                  |
+| `/myvisit/:userId`        | `Index`   | Yes                 |
+| `/myvisit/:visitId`       | `Show`    | Yes                 |
+| `/myvisit/:userId`        | `Create`  | Yes                 |
 
 </details>
 
@@ -245,21 +261,30 @@
 
 <h1>:bust_in_silhouette: User Story</h1>
 
-**As a Public User:**
-- navigate through a list of haunted destinations.
-- click on individual destinations to view information to the specific destination.
-- sign up
+<details open>
+<summary>As a Public User</summary>
+<p></p>
+<ul>
+    <li>As a public user they want to be able to be view haunted locales</li>
+    <li>They want be able click on individual haunted locales and view their details</li>
+</ul>
+</details>
+<p></p>
 
-**As a Logged in User:**
-- log in
-- navigate through a list of haunted destinations.
-- click on individual destinations to view information to the specific destination.
-- keep a list of the locations they've visited.
-- review the haunted locations they've visited.
-- log personal details and information of each visit they visited.
-- edit and remove visited locations 
-- create a a new location for other user's to see publicly
-- sign out
+<details open>
+<summary>As a Logged in User</summary>
+<p></p>
+<ul>
+    <li>As a logged in user they want to be able do all that a public user can do but with added functionality</li>
+    <li>They want to be able to add their own haunted locales</li>
+    <li>They want to be able to edit their own haunted locales</li>
+    <li>They want to be able to view their visits to the haunted locales</li>
+    <li>They want to be able to add visits a haunted locales</li>
+    <li>They want to be able to edit visits a haunted locales</li>
+    <li>They want to be able to delete visits a haunted locales</li>
+</ul>
+</details>
+<p></p>
 
 <h1>:computer: Technologies Used</h1>
 
