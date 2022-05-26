@@ -265,8 +265,8 @@
 <summary>As a Public User</summary>
 <p></p>
 <ul>
-    <li>As a public user they want to be able to be view haunted locales</li>
-    <li>They want be able click on individual haunted locales and view their details</li>
+    <li>As a public user they want to be able to view haunted locales</li>
+    <li>They want be able to click on individual haunted locales and view their details</li>
 </ul>
 </details>
 <p></p>
@@ -275,13 +275,13 @@
 <summary>As a Logged in User</summary>
 <p></p>
 <ul>
-    <li>As a logged in user they want to be able do all that a public user can do but with added functionality</li>
+    <li>As a logged in user they want to be able to do all that a public user can do but with added functionality</li>
     <li>They want to be able to add their own haunted locales</li>
     <li>They want to be able to edit their own haunted locales</li>
-    <li>They want to be able to view their visits to the haunted locales</li>
-    <li>They want to be able to add visits a haunted locales</li>
-    <li>They want to be able to edit visits a haunted locales</li>
-    <li>They want to be able to delete visits a haunted locales</li>
+    <li>They want to be able to view their visits on the haunted locales</li>
+    <li>They want to be able to add visits to a haunted locales</li>
+    <li>They want to be able to edit visits on a haunted locales</li>
+    <li>They want to be able to delete visits on a haunted locales</li>
 </ul>
 </details>
 <p></p>
