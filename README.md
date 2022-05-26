@@ -168,8 +168,39 @@
 - create a a new location for other user's to see publicly
 - sign out
 
-# Routes Table:
-- coming soon.
+<h1>:arrow_right: Routes</h1>
+
+<details>
+<summary> Spooky Places</summary>
+
+| Endpoint                  | Component | AuthenticatedRoute? |
+|---------------------------|-----------|---------------------|
+| `/spookyplaces`           | `Index`   | No                  |
+
+</details>
+
+Visits
+
+<details>
+<summary> Visit</summary>
+
+| Endpoint                  | Component | AuthenticatedRoute? |
+|---------------------------|-----------|---------------------|
+| `/myvisit/:userId`        | `Index`   | No                  |
+
+</details>
+
+<details>
+<summary> User</summary>
+
+| Endpoint                  | Component        | AuthenticatedRoute? |
+|---------------------------|------------------|---------------------|
+| `/sign-up`                | `SignUp`         | No                  |
+| `/sign-in`                | `SignIn`         | No                  |
+| `/sign-out`               | `SignOut`        | Yes                 |
+| `/change-password`        | `ChangePassword` | Yes                 |
+
+</details>
 
 # Wireframe:
 - Sign in page:
