@@ -151,23 +151,6 @@
 </details>
 <p></p>
 
-# User Story:
-**As a Public User:**
-- navigate through a list of haunted destinations.
-- click on individual destinations to view information to the specific destination.
-- sign up
-
-**As a Logged in User:**
-- log in
-- navigate through a list of haunted destinations.
-- click on individual destinations to view information to the specific destination.
-- keep a list of the locations they've visted.
-- review the haunted locations they've visited.
-- log personal details and information of each visit they visited.
-- edit and remove visited locations 
-- create a a new location for other user's to see publicly
-- sign out
-
 <h1>:arrow_right: Routes</h1>
 
 <details>
@@ -178,8 +161,6 @@
 | `/spookyplaces`           | `Index`   | No                  |
 
 </details>
-
-Visits
 
 <details>
 <summary> Visit</summary>
@@ -202,33 +183,71 @@ Visits
 
 </details>
 
-# Wireframe:
-- Sign in page:
-    coming soon
-- Index page of all the haunted destinations:
-![layout](/public/wireframeIndex.png)
-- Show page:
-![layout](/public/wireframeShow.png)
-- Visited show page:
-![layout](/public/VisitedShow.png)
-- Sign out page: 
-coming soon
+<h1>:framed_picture: Screenshots</h1>
 
-# Approach Taken:
-- create restful routes to be able to format an index, edit, show, and delete function
-- use axios to pull in data from API to render to the client 
-- format pages through react
+<details>
+<summary> :art: Wireframes</summary><br />
 
-# Installation Instructions:
-- coming soon.
+| Description                               | Screenshot                                               |
+|------------------------------------------ | ---------------------------------------------------------|
+| <h3 align="center">Index Page</h3>        | <img src="https://i.imgur.com/y4ch2Cc.png" width="700">  |
+| <h3 align="center">Show Page</h3>         | <img src="https://i.imgur.com/7tYwFrd.png" width="700">  |
 
-# Tech Used:
-- HTML
-- Javascript
-- React
-- Boostrap
-- CSS
-- Axios
-- MongoDB
-- Mongoose
-- will add more!
+</details>
+
+<details open>
+<summary> :gear: Functionality</summary><br />
+
+| Description                               | Screenshot                                               |
+|------------------------------------------ | ---------------------------------------------------------|
+| <h3 align="center">Home Page</h3>         | <img src="https://i.imgur.com/xXyrrSk.png" width="700"/> |
+| <h3 align="center">Sign In Page</h3>      | <img src="https://i.imgur.com/fv3DGT8.png" width="700"/> |
+| <h3 align="center">Sign Up Page</h3>      | <img src="https://i.imgur.com/QXU2Tud.png" width="700"/> |
+| <h3 align="center">Index Page</h3>        | <img src="https://i.imgur.com/2IIr54r.png" width="700">  |
+| <h3 align="center">Show Page</h3>         | <img src="https://i.imgur.com/exh3HWA.png" width="700"/> |
+| <h3 align="center">Visit Index Page</h3>  | <img src="https://i.imgur.com/wpo5VSr.png" width="700">  |
+| <h3 align="center">Visit Show Page</h3>   | <img src="https://i.imgur.com/4LoxmVx.png" width="700">  |
+
+</details>
+<p></p>
+
+</details>
+<p></p>
+
+<h1>:bust_in_silhouette: User Story</h1>
+
+**As a Public User:**
+- navigate through a list of haunted destinations.
+- click on individual destinations to view information to the specific destination.
+- sign up
+
+**As a Logged in User:**
+- log in
+- navigate through a list of haunted destinations.
+- click on individual destinations to view information to the specific destination.
+- keep a list of the locations they've visited.
+- review the haunted locations they've visited.
+- log personal details and information of each visit they visited.
+- edit and remove visited locations 
+- create a a new location for other user's to see publicly
+- sign out
+
+<h1>:computer: Technologies Used</h1>
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+![FontAwesome](https://img.shields.io/badge/Font_Awesome-339AF0?style=for-the-badge&logo=fontawesome&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) 
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![NPM](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
+![Axios](https://img.shields.io/badge/-Axios-blue?style=for-the-badge&logoColor=white)
+![ReactRouter](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+
+<h1>:fast_forward: Next Steps</h1>
+
+<ul>
+    <li>Add ability for users to favorite haunted locales for later reference</li>
+    <li>Add ability for user comments on haunted locales and visits</li>
+    <li>Add ability to sort locales by location</li>
+ </ul>
