@@ -107,10 +107,22 @@
 <h3> :calling: How To Use </h3>
 
 <details>
+<summary>How to View a Haunted Locale</summary>
+<p></p>
+<ol>
+   <li>Once signed in, click the Eye Button on the location you wish to view</li>
+   <li>You will be able to view details of the Haunted Locale on the location's page</li>
+</ol>
+</details>
+<p></p>
+
+<details>
 <summary>How to Add a Haunted Locale</summary>
 <p></p>
 <ol>
-   <li></li>
+   <li>Once signed in, click Add New Place in the Navbar</li>
+   <li>Fill in all the fields and then click Submit at the bottom of the page</li>
+   <li>Your Haunted Locale will now appear on the page with all the other locations</li>
 </ol>
 </details>
 <p></p>
@@ -119,7 +131,12 @@
 <summary>How to Edit a Haunted Locale</summary>
 <p></p>
 <ol>
-   <li></li>
+   <li>Click on the Eye Button on one of the Haunted Locales you wish to edit</li>
+   <li>If you created it, you will see an Edit Place button on the lower right corner of the page</li>
+   <li>Click the Edit Place Button to be taken to the Edit Form</li>
+   <li>Fill in the fields you wish to Edit</li>
+   <li>Click Submit at the bottom of the Edit Form</li>
+   <li>Your Haunted Locale with the edited details will appear on the location's page</li> 
 </ol>
 </details>
 <p></p>
@@ -128,7 +145,11 @@
 <summary>How to Add a Visit</summary>
 <p></p>
 <ol>
-   <li></li>
+   <li>Click on the Eye Button on one of the Haunted Locales you wish to Visit</li>
+   <li>Click the Visited! button on the lower right corner of the page</li>
+   <li>Fill in the appropriate details and click Submit at the bottom of the page</li>
+   <li>Your Visit will appear in the My Visits page</li>
+
 </ol>
 </details>
 <p></p>
@@ -137,7 +158,12 @@
 <summary>How to Edit a Visit</summary>
 <p></p>
 <ol>
-   <li></li>
+   <li>Click on My Visits in the Navbar</li>
+   <li>Click the Eye Button on the Visit you wish to Edit</li>
+   <li>Click the Edit Visited button on the bottom right corner of the page</li>
+   <li>Fill in the fields you wish to change and then click the Submit Button</li>
+   <li>Your Visit  with edited details will appear on the Visit's page</li>
+
 </ol>
 </details>
 <p></p>
@@ -146,7 +172,10 @@
 <summary>How to Delete a Visit</summary>
 <p></p>
 <ol>
-   <li></li>
+    <li>Click on My Visits in the Navbar</li>
+   <li>Click the Eye Button on the Visit you wish to Edit</li>
+   <li>Click the Delete Visited button on the bottom right corner of the page</li>
+   <li>Your Visit will no longer appear on the My Visits page</li>
 </ol>
 </details>
 <p></p>
